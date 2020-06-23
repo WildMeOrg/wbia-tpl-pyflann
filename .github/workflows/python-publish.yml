@@ -28,6 +28,8 @@ jobs:
         env:
           CIBW_MANYLINUX_X86_64_IMAGE: wildme/manylinux:latest
           CIBW_BUILD: cp36-manylinux_x86_64 cp36-macosx_x86_64
+          # Scripts to prepare the environment
+          CIBW_BEFORE_BUILD_LINUX: bash scripts/ci_prepare_linux_for_build.sh
         run: |
           python -m cibuildwheel --output-dir wheelhouse
 
