@@ -34,13 +34,13 @@ message(STATUS "PYFLANN_VERSION = ${PYFLANN_VERSION}")
 DISSECT_VERSION()
 GET_OS_INFO()
 
-if (OS_IS_MACOS)
-    message(STATUS "INCLUDING MACPORTS")
+if (APPLE)
+    message(STATUS "Including Homebrew")
 
-    include_directories(/opt/local/include)
-    link_directories(/opt/local/lib)
+    include_directories(/usr/local/include)
+    link_directories(/usr/local/lib)
 
-    set(CMAKE_INSTALL_RPATH "/opt/local/lib")
+    set(CMAKE_INSTALL_RPATH "/usr/local/lib")
 
     # Add flags to support clang2
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -stdlib=libc++")
