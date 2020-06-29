@@ -57,8 +57,39 @@ jobs:
         with:
           path: dist/*.tar.gz
 
-  upload_pypi:
+  test_wheels:
     needs: [build_wheels, build_sdist]
+    name: Run tests on wheels on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      max-parallel: 2
+      matrix:
+        os: [ubuntu-18.04]
+    steps:
+      - uses: actions/download-artifact@v2
+        name: Download artifacts
+        with:
+          name: artifact
+          path: dist
+
+      - uses: actions/setup-python@v2
+        name: Install Python
+        with:
+          python-version: '3.6'
+
+      - name: Install wheel and tests dependencies
+        run: |
+          pip install $(echo dist/*manylinux2010_x86_64.whl)[tests]
+
+      - name: Run tests
+        run: |
+          xdoctest pyflann --style=google all && \
+          tar xf dist/*.tar.gz --wildcards wbia-pyflann*/test/ && \
+          cd wbia-pyflann*/test && \
+          pytest
+
+  upload_pypi:
+    needs: [test_wheels, build_sdist]
     runs-on: ubuntu-latest
     # upload to PyPI on every tag starting with 'v'
     if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags/v')
