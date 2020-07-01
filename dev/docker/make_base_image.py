@@ -38,7 +38,7 @@ def main():
     BASE_IMAGE = 'quay.io/pypa/manylinux2010_x86_64'
 
     docker_code = ub.codeblock(
-        f'''
+        f"""
         FROM {BASE_IMAGE}
 
         RUN yum install lz4-devel -y
@@ -78,7 +78,7 @@ def main():
             /opt/python/$MB_PYTHON_TAG/bin/python -m virtualenv ./venv-$MB_PYTHON_TAG && \
             source ./venv-$MB_PYTHON_TAG/bin/activate && \
             pip install scikit-build cmake ninja
-        '''
+        """
     )
 
     docker_code2 = '\n\n'.join([ub.paragraph(p) for p in docker_code.split('\n\n')])
@@ -123,7 +123,7 @@ def main():
     print(
         ub.highlight_code(
             ub.codeblock(
-                r'''
+                r"""
         # Finished creating the docker image.
         # To test / export / publish you can do something like this:
 
@@ -149,7 +149,7 @@ def main():
 
         # Upload the docker image to quay.io
         docker push {DOCKER_URI}
-        '''
+        """
             ).format(NAME=NAME, ROOT=ROOT, DOCKER_TAG=DOCKER_TAG, DOCKER_URI=DOCKER_URI,),
             'bash',
         )
