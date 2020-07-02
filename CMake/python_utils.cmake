@@ -52,7 +52,7 @@ function(_pycmd outvar cmd)
     COMMAND "${PYTHON_EXECUTABLE}" -c "${cmd}"
     RESULT_VARIABLE _exitcode
     OUTPUT_VARIABLE _output
-    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
   if(NOT ${_exitcode} EQUAL 0)
     message(ERROR "Failed when running python code: \"\"\"
 ${cmd}\"\"\"")
