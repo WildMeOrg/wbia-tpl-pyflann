@@ -33,7 +33,10 @@
 mkinit pyflann
 """
 
-__version__ = '3.0.0'
+try:
+    from pyflann._version import __version__
+except ImportError:
+    __version__ = '0.0.0'
 
 
 from pyflann import exceptions
