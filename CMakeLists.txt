@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.13.0)
+
 set(CMAKE_CXX_STANDARD 11)
 
 if(COMMAND cmake_policy)
@@ -43,7 +44,6 @@ if(OS_IS_MACOS)
 
   set(CMAKE_INSTALL_RPATH "/opt/local/lib")
 
-  # Add flags to support clang2
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -stdlib=libc++")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
   set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -lc++")
@@ -64,7 +64,7 @@ if("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
   set(CMAKE_COMPILER_IS_CLANGXX 1)
 endif()
 
-list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMake)
 
 # Add an "uninstall" target
 configure_file("${PROJECT_SOURCE_DIR}/CMake/uninstall_target.cmake.in"
@@ -183,6 +183,7 @@ if(BUILD_CUDA_LIB)
 endif(BUILD_CUDA_LIB)
 
 find_package(PkgConfig REQUIRED)
+
 pkg_check_modules(LZ4 REQUIRED liblz4)
 
 # set the C/C++ include path to the "include" directory

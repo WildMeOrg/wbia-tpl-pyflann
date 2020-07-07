@@ -1,2 +1,2 @@
 #!/bin/bash
-xdoctest pyflann --style=google all
+xdoctest -m pyflann --style=google all

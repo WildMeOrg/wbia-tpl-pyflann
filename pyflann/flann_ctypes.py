@@ -157,7 +157,7 @@ class FLANNParameters(CustomStructure):
             'autotuned': 255,
             'default': 1,
         },
-        'centers_init': {'random': 0, 'gonzales': 1, 'kmeanspp': 2, 'default': 0,},
+        'centers_init': {'random': 0, 'gonzales': 1, 'kmeanspp': 2, 'default': 0},
         'log_level': {
             'none': 0,
             'fatal': 1,
