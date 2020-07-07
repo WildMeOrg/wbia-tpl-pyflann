@@ -32,17 +32,6 @@ jobs:
           sudo xcode-select -s /Applications/Xcode_11.5.app/Contents/Developer
           xcodebuild -version
 
-      - name: macOS - Cache MacPorts and OpenCV dependencies for macOS
-        id: caching
-        if: ${{ runner.os == 'macOS' }}
-        uses: actions/cache@v2
-        with:
-          path: |
-            /opt
-          # The key based on the file hash of the build script
-          # i.e. changing OPENCV_VERSION within the script will invalidate the cache
-          key: ${{ runner.os }}-build-opencv-${{ hashFiles('scripts/_install_opencv_*_on_macos.sh') }}
-
       - name: macOS - Install MacPorts
         if: ${{ runner.os == 'macOS' && steps.caching.outputs.cache-hit != 'true' }}
         uses: WildbookOrg/wbia-pypkg-build/actions/macports@v1.0.0
