@@ -33,7 +33,7 @@ jobs:
           xcodebuild -version
 
       - name: macOS - Install MacPorts
-        if: ${{ runner.os == 'macOS' && steps.caching.outputs.cache-hit != 'true' }}
+        if: ${{ runner.os == 'macOS' }}
         uses: WildbookOrg/wbia-pypkg-build/actions/macports@v1.0.0
 
       - name: Build wheel
