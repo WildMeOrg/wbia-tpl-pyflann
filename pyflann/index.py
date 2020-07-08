@@ -293,7 +293,7 @@ class FLANN(object):
         """
         Adds points to pre-built index.
 
-        Params:
+        Args:
             pts: 2D numpy array of points.
             rebuild_threshold: reallocs index when it grows by factor of
                 `rebuild_threshold`. A smaller value results is more space

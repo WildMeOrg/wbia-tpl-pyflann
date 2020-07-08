@@ -90,7 +90,7 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 # set the default path for built libraries to the "lib" directory
 set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 # set output path for tests
-set(TEST_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/test)
+set(TEST_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/tests)
 
 option(BUILD_C_BINDINGS "Build C bindings" ON)
 option(BUILD_CUDA_LIB "Build CUDA library" OFF)
@@ -221,7 +221,7 @@ if(BUILD_EXAMPLES)
   add_subdirectory(examples)
 endif(BUILD_EXAMPLES)
 if(BUILD_TESTS)
-  add_subdirectory(test)
+  add_subdirectory(tests)
 endif(BUILD_TESTS)
 
 # CMake configuration file creation Include module with fuction

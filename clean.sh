@@ -5,7 +5,13 @@ rm -rf _skbuild
 rm -rf pyflann/lib
 rm -rf dist
 rm -rf build
+rm -rf cmake-builds
+rm -rf htmlcov
+rm -rf pip-wheel-metadata
 rm -rf *.egg-info
+
+rm -rf index.dat
+rm -rf test*.flann
 
 rm -rf mb_work
 rm -rf wheelhouse
