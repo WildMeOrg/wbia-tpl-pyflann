@@ -1,13 +1,14 @@
-|Pypi| |Travis|
+===================
+Wildbook IA - FLANN
+===================
 
+|Build| |Pypi| |ReadTheDocs|
+
+FLANN - Fast Library for Approximate Nearest Neighbors
 
 This is a Fork of the FLANN repo, under a different name for use in the Wildbook
 project. The main difference is that it has a few more helper function calls
 and it should be easier build wheels and to pip install.
-
-
-FLANN - Fast Library for Approximate Nearest Neighbors
-======================================================
 
 FLANN is a library for performing fast approximate nearest neighbor searches in high dimensional spaces. It contains a collection of algorithms we found to work best for nearest neighbor search and a system for automatically choosing the best algorithm and optimum parameters depending on the dataset.
 FLANN is written in C++ and contains bindings for the following languages: C, MATLAB, Python, and Ruby.
@@ -50,7 +51,14 @@ Conditions of use
 FLANN is distributed under the terms of the [BSD License](https://github.com/mariusmuja/flann/blob/master/COPYING).
 
 
-.. |Travis| image:: https://img.shields.io/travis/WildbookOrg/wbia-pyflann/master.svg?label=Travis%20CI
-   :target: https://travis-ci.org/WildbookOrg/wbia-pyflann?branch=master
+.. |Build| image:: https://img.shields.io/github/workflow/status/WildbookOrg/wbia-tpl-pyflann/Build%20and%20upload%20to%20PyPI/master
+    :target: https://github.com/WildbookOrg/wbia-tpl-pyflann/actions?query=branch%3Amaster+workflow%3A%22Build+and+upload+to+PyPI%22
+    :alt: Build and upload to PyPI (master)
+
 .. |Pypi| image:: https://img.shields.io/pypi/v/wbia-pyflann.svg
    :target: https://pypi.python.org/pypi/wbia-pyflann
+   :alt: Latest PyPI version
+
+.. |ReadTheDocs| image:: https://readthedocs.org/projects/wbia-tpl-pyflann/badge/?version=latest
+    :target: http://wbia-tpl-pyflann.readthedocs.io/en/latest/
+    :alt: Documentation on ReadTheDocs
