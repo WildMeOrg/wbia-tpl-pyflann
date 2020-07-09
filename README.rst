@@ -1,10 +1,10 @@
-===================
-Wildbook IA - FLANN
-===================
+=====================
+Wildbook IA - PyFlann
+=====================
 
 |Build| |Pypi| |ReadTheDocs|
 
-FLANN - Fast Library for Approximate Nearest Neighbors
+FLANN - Fast Library for Approximate Nearest Neighbors! - Part of the WildMe / Wildbook IA Project.
 
 This is a Fork of the FLANN repo, under a different name for use in the Wildbook
 project. The main difference is that it has a few more helper function calls

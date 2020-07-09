@@ -39,6 +39,6 @@ tmp
 # setuptools_scm version discovery writes the version to <pkg>/_version.py
 **/_version.py
 
-_docs/build
-_docs/template
-_docs/static
+_docs/_build
+_docs/_template
+_docs/_static
