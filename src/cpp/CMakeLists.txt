@@ -13,10 +13,10 @@ add_definitions(-DFLANN_VERSION=${FLANN_VERSION})
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/flann/config.h.in
                ${CMAKE_CURRENT_SOURCE_DIR}/flann/config.h)
 
-file(GLOB_RECURSE C_SOURCES flann.cpp)
-file(GLOB_RECURSE CPP_SOURCES flann_cpp.cpp)
+file(GLOB_RECURSE C_SOURCES flann.cpp lz4.c lz4hc.c)
+file(GLOB_RECURSE CPP_SOURCES flann_cpp.cpp lz4.c lz4hc.c)
 file(GLOB_RECURSE CU_SOURCES *.cu)
-file(GLOB_RECURSE HEADER_SOURCES flann.h)
+file(GLOB_RECURSE HEADER_SOURCES flann.h lz4hc.h lz4.h)
 
 add_library(flann_cpp_s STATIC ${CPP_SOURCES})
 target_link_libraries(flann_cpp_s ${LZ4_LIBRARIES})
