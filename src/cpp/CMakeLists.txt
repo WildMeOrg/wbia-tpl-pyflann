@@ -16,6 +16,7 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/flann/config.h.in
 file(GLOB_RECURSE C_SOURCES flann.cpp)
 file(GLOB_RECURSE CPP_SOURCES flann_cpp.cpp)
 file(GLOB_RECURSE CU_SOURCES *.cu)
+file(GLOB_RECURSE HEADER_SOURCES flann.h)
 
 add_library(flann_cpp_s STATIC ${CPP_SOURCES})
 target_link_libraries(flann_cpp_s ${LZ4_LIBRARIES})
