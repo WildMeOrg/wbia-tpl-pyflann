@@ -18,9 +18,16 @@ file(GLOB_RECURSE CPP_SOURCES flann_cpp.cpp lz4.c lz4hc.c)
 file(GLOB_RECURSE CU_SOURCES *.cu)
 file(GLOB_RECURSE HEADER_SOURCES flann.h lz4hc.h lz4.h)
 
+link_directories(${LZ4_LIBRARY_DIRS})
+include_directories(${LZ4_INCLUDE_DIRS})
+
 add_library(flann_cpp_s STATIC ${CPP_SOURCES})
 target_link_libraries(flann_cpp_s ${LZ4_LIBRARIES})
-target_link_libraries(flann_cpp_s ${OpenMP_LIBRARIES})
+target_include_directories(flann_cpp_s PUBLIC ${LZ4_INCLUDE_DIRS})
+
+if(OPENMP_FOUND)
+  target_link_libraries(flann_cpp_s ${OpenMP_CXX_LIBRARIES})
+endif()
 
 if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_CLANG)
   set_target_properties(flann_cpp_s PROPERTIES COMPILE_FLAGS -fPIC)
@@ -32,7 +39,11 @@ set_property(TARGET flann_cpp_s PROPERTY COMPILE_DEFINITIONS FLANN_STATIC
 if(BUILD_C_BINDINGS)
   add_library(flann_s STATIC ${C_SOURCES})
   target_link_libraries(flann_s ${LZ4_LIBRARIES})
-  target_link_libraries(flann_s ${OpenMP_LIBRARIES})
+  target_include_directories(flann_s PUBLIC ${LZ4_INCLUDE_DIRS})
+
+  if(OPENMP_FOUND)
+    target_link_libraries(flann_s ${OpenMP_CXX_LIBRARIES})
+  endif()
 
   if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_CLANG)
     set_target_properties(flann_s PROPERTIES COMPILE_FLAGS -fPIC)
@@ -127,6 +138,18 @@ if(BUILD_CUDA_LIB)
                DEFINE_SYMBOL FLANN_EXPORTS)
 endif()
 
+if(USE_MPI AND HDF5_IS_PARALLEL)
+  add_executable(flann_mpi_server flann/mpi/flann_mpi_server.cpp)
+  target_link_libraries(flann_mpi_server ${LINK_FLAG_PREFIX} flann_cpp_s
+                      ${LINK_FLAG_POSTFIX} ${HDF5_LIBRARIES}
+                        ${MPI_LIBRARIES} ${Boost_LIBRARIES})
+
+  add_executable(flann_mpi_client flann/mpi/flann_mpi_client.cpp)
+  target_link_libraries(flann_mpi_client ${LINK_FLAG_PREFIX} flann_cpp_s
+                      ${LINK_FLAG_POSTFIX} ${HDF5_LIBRARIES}
+                        ${MPI_LIBRARIES} ${Boost_LIBRARIES})
+endif()
+
 if(NOT SKBUILD)
   if(WIN32)
     if(BUILD_C_BINDINGS AND BUILD_MATLAB_BINDINGS)
@@ -165,6 +188,17 @@ if(NOT SKBUILD)
       ARCHIVE DESTINATION ${FLANN_LIB_INSTALL_DIR})
   endif()
 
+  if(USE_MPI AND HDF5_IS_PARALLEL)
+    install(
+      TARGETS flann_mpi_client flann_mpi_server
+      EXPORT ${targets_export_name}
+      INCLUDES
+      DESTINATION include
+      RUNTIME DESTINATION bin
+      LIBRARY DESTINATION ${FLANN_LIB_INSTALL_DIR}
+      ARCHIVE DESTINATION ${FLANN_LIB_INSTALL_DIR})
+  endif()
+
   install(
     DIRECTORY flann
     DESTINATION include
@@ -173,18 +207,6 @@ if(NOT SKBUILD)
     PATTERN "*.hpp")
 
 else()
-  if(USE_MPI AND HDF5_IS_PARALLEL)
-    add_executable(flann_mpi_server flann/mpi/flann_mpi_server.cpp)
-    target_link_libraries(flann_mpi_server flann_cpp ${HDF5_LIBRARIES}
-                          ${MPI_LIBRARIES} ${Boost_LIBRARIES})
-
-    add_executable(flann_mpi_client flann/mpi/flann_mpi_client.cpp)
-    target_link_libraries(flann_mpi_client flann_cpp ${HDF5_LIBRARIES}
-                          ${MPI_LIBRARIES} ${Boost_LIBRARIES})
-
-    install(TARGETS flann_mpi_client flann_mpi_server DESTINATION bin)
-  endif()
-
   # Only install the library files when building with skbuild
   install(
     TARGETS flann_cpp flann_cpp_s
@@ -203,6 +225,14 @@ else()
   if(BUILD_CUDA_LIB)
     install(
       TARGETS flann_cuda flann_cuda_s
+      EXPORT ${targets_export_name}
+      LIBRARY DESTINATION ${FLANN_LIB_INSTALL_DIR}
+      ARCHIVE DESTINATION ${FLANN_LIB_INSTALL_DIR})
+  endif()
+
+  if(USE_MPI AND HDF5_IS_PARALLEL)
+    install(
+      TARGETS flann_mpi_client flann_mpi_server
       EXPORT ${targets_export_name}
       LIBRARY DESTINATION ${FLANN_LIB_INSTALL_DIR}
       ARCHIVE DESTINATION ${FLANN_LIB_INSTALL_DIR})

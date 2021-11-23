@@ -160,7 +160,7 @@ class FLANN(object):
         return self.shape[0]
 
     def get_indexed_shape(self):
-        """ returns the shape of the data being indexed """
+        """returns the shape of the data being indexed"""
         npts, dim = self.__curindex_data.shape
         for _extra in self.__added_data:
             npts += _extra.shape[0]
@@ -584,7 +584,12 @@ class FLANN(object):
         self.__flann_parameters.update(params)
 
         numclusters = flann.compute_cluster_centers[pts.dtype.type](
-            pts, npts, dim, num_clusters, result, pointer(self.__flann_parameters),
+            pts,
+            npts,
+            dim,
+            num_clusters,
+            result,
+            pointer(self.__flann_parameters),
         )
         if numclusters <= 0:
             raise FLANNException('Error occured during clustering procedure.')

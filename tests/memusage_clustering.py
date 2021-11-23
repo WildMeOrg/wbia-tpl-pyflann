@@ -20,8 +20,7 @@ _scale = {
 
 
 def _VmB(VmKey):
-    """Private.
-    """
+    """Private."""
     global _proc_status, _scale
     # get pseudo file  /proc/<pid>/status
     try:
@@ -40,20 +39,17 @@ def _VmB(VmKey):
 
 
 def memory(since=0.0):
-    """Return memory usage in bytes.
-    """
+    """Return memory usage in bytes."""
     return _VmB('VmSize:') - since
 
 
 def resident(since=0.0):
-    """Return resident memory usage in bytes.
-    """
+    """Return resident memory usage in bytes."""
     return _VmB('VmRSS:') - since
 
 
 def stacksize(since=0.0):
-    """Return stack size in bytes.
-    """
+    """Return stack size in bytes."""
     return _VmB('VmStk:') - since
 
 

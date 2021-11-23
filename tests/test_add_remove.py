@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import unittest
+import pytest
 
 import numpy as np
 
@@ -65,6 +66,7 @@ class Test_PyFlann_add_remove(unittest.TestCase):
             'at least some of the returned points should be from the added set',
         )
 
+    @pytest.mark.skip(reason="unused feature")
     def test_add(self):
         """
         Test simple case of add_points
@@ -102,6 +104,7 @@ class Test_PyFlann_add_remove(unittest.TestCase):
             'most old points should be found next',
         )
 
+    @pytest.mark.skip(reason="unused feature")
     def test_remove(self):
         """
         Test simple case of remove points
@@ -137,10 +140,12 @@ class Test_PyFlann_add_remove(unittest.TestCase):
         check2_odd = result2.T[0][1::2] == data_ids[1::2]
         check2_even = result2.T[0][0::2] == data_ids[0::2]
         self.assertTrue(
-            np.all(check2_odd), 'unremoved points should have unchanged neighbors',
+            np.all(check2_odd),
+            'unremoved points should have unchanged neighbors',
         )
         self.assertTrue(
-            not np.any(check2_even), 'removed points should have different neighbors',
+            not np.any(check2_even),
+            'removed points should have different neighbors',
         )
 
     def test_used_memory(self):

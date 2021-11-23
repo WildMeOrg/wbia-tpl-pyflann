@@ -58,22 +58,46 @@ class Test_PyFLANN_nn_index(unittest.TestCase):
 
     def testnn__save_kmeans_2(self):
         self.run_nn_index_save_rand(
-            64, 1000, 1000, algorithm='kmeans', branching=2, iterations=11, checks=64,
+            64,
+            1000,
+            1000,
+            algorithm='kmeans',
+            branching=2,
+            iterations=11,
+            checks=64,
         )
 
     def testnn__save_kmeans_8(self):
         self.run_nn_index_save_rand(
-            64, 10000, 1000, algorithm='kmeans', branching=8, iterations=11, checks=32,
+            64,
+            10000,
+            1000,
+            algorithm='kmeans',
+            branching=8,
+            iterations=11,
+            checks=32,
         )
 
     def testnn__save_kmeans_16(self):
         self.run_nn_index_save_rand(
-            64, 10000, 1000, algorithm='kmeans', branching=16, iterations=11, checks=40,
+            64,
+            10000,
+            1000,
+            algorithm='kmeans',
+            branching=16,
+            iterations=11,
+            checks=40,
         )
 
     def testnn__save_kmeans_32(self):
         self.run_nn_index_save_rand(
-            64, 10000, 1000, algorithm='kmeans', branching=32, iterations=11, checks=56,
+            64,
+            10000,
+            1000,
+            algorithm='kmeans',
+            branching=32,
+            iterations=11,
+            checks=56,
         )
 
     def run_nn_index_save_perturbed(self, dim, N, **kwargs):

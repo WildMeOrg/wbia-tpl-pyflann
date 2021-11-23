@@ -50,9 +50,9 @@ STRING = c_char_p
 
 class CustomStructure(Structure):
     """
-        This class extends the functionality of the ctype's structure
-        class by adding custom default values to the fields and a way of translating
-        field types.
+    This class extends the functionality of the ctype's structure
+    class by adding custom default values to the fields and a way of translating
+    field types.
     """
 
     _defaults_ = {}

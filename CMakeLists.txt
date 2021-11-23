@@ -37,12 +37,15 @@ dissect_version()
 get_os_info()
 
 if(OS_IS_MACOS)
-  message(STATUS "INCLUDING MACPORTS")
+  message(STATUS "INCLUDING HOMEBREW")
 
-  include_directories(/opt/local/include)
-  link_directories(/opt/local/lib)
+  execute_process(COMMAND brew --prefix OUTPUT_VARIABLE BREW_PREFIX OUTPUT_STRIP_TRAILING_WHITESPACE)
+  message(STATUS "BREW_PREFIX = ${BREW_PREFIX}")
 
-  set(CMAKE_INSTALL_RPATH "/opt/local/lib")
+  include_directories("${BREW_PREFIX}/include")
+  link_directories("${BREW_PREFIX}/lib")
+
+  set(CMAKE_INSTALL_RPATH "${BREW_PREFIX}/lib")
 
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -stdlib=libc++")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
@@ -94,11 +97,11 @@ set(TEST_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/tests)
 
 option(BUILD_C_BINDINGS "Build C bindings" ON)
 option(BUILD_CUDA_LIB "Build CUDA library" OFF)
-option(BUILD_EXAMPLES "Build examples" ON)
-option(BUILD_TESTS "Build tests" ON)
-option(BUILD_DOC "Build documentation" ON)
+option(BUILD_EXAMPLES "Build examples" OFF)
+option(BUILD_TESTS "Build tests" OFF)
+option(BUILD_DOC "Build documentation" OFF)
 option(USE_OPENMP "Use OpenMP multi-threading" ON)
-option(USE_MPI "Use MPI" OFF)
+option(USE_MPI "Use MPI" ON)
 
 set(NVCC_COMPILER_BINDIR
     ""
@@ -184,7 +187,7 @@ endif(BUILD_CUDA_LIB)
 
 find_package(PkgConfig REQUIRED)
 
-pkg_check_modules(LZ4 REQUIRED liblz4)
+find_package(LZ4)
 
 # set the C/C++ include path to the "include" directory
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/src/cpp)
@@ -297,4 +300,5 @@ message(STATUS "Building documentation: ${BUILD_DOC}")
 message(STATUS "Building matlab bindings: ${BUILD_MATLAB_BINDINGS}")
 message(STATUS "Building CUDA library: ${BUILD_CUDA_LIB}")
 message(STATUS "Using OpenMP support: ${USE_OPENMP}")
+message(STATUS "HDF5 MPI: ${HDF5_IS_PARALLEL}")
 message(STATUS "Using MPI support: ${USE_MPI}")

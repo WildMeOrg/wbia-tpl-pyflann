@@ -26,7 +26,11 @@ def run_benchmark():
 
     with ub.Timer(label='building kdtrees', verbose=True) as t:
         params = flann.build_index(
-            dataset, algorithm='kdtree', trees=6, random_seed=random_seed, cores=6,
+            dataset,
+            algorithm='kdtree',
+            trees=6,
+            random_seed=random_seed,
+            cores=6,
         )
 
     print(params)

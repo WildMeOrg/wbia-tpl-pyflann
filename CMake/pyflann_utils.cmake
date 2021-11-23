@@ -23,6 +23,7 @@ macro(DISSECT_VERSION)
 endmacro(DISSECT_VERSION)
 
 # workaround a FindHDF5 bug
+set(HDF5_PREFER_PARALLEL TRUE)
 macro(find_hdf5)
   find_package(HDF5)
 
