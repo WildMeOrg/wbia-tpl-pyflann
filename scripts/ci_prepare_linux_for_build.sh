@@ -6,6 +6,8 @@ pip install -r requirements/build.txt
 
 if command -v yum &> /dev/null
 then
+    yum update
+
     yum install -y \
         pkgconfig \
         boost \
@@ -15,6 +17,8 @@ then
         hdf5-openmpi \
         lz4-devel
 else
+    apt-get update
+
     apt-get install \
         pkg-config \
         libboost-all-dev \
