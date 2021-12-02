@@ -8,9 +8,9 @@ import numpy as np
 import pyflann
 
 VALID_INT_TYPES = (
-    np.typeDict['int64'],
-    np.typeDict['int32'],
-    np.typeDict['uint8'],
+    np.sctypeDict['int64'],
+    np.sctypeDict['int32'],
+    np.sctypeDict['uint8'],
     np.dtype('int32'),
     np.dtype('uint8'),
     np.dtype('int64'),
