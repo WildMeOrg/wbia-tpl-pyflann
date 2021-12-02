@@ -10,7 +10,7 @@ import numpy as np
 import pyflann
 
 
-@pytest.mark.skip(reason="unused feature")
+@pytest.mark.skip(reason='unused feature')
 class Test_PyFlann_add_remove_save(unittest.TestCase):
     def setUp(self):
         pass
@@ -24,7 +24,7 @@ def delete_file(fpath):
         os.remove(fpath)
 
 
-@pytest.mark.skip(reason="unused feature")
+@pytest.mark.skip(reason='unused feature')
 def test_remove_save():
     """
     References:

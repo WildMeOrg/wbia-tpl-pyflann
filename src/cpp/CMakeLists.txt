@@ -140,14 +140,24 @@ endif()
 
 if(USE_MPI AND HDF5_IS_PARALLEL)
   add_executable(flann_mpi_server flann/mpi/flann_mpi_server.cpp)
-  target_link_libraries(flann_mpi_server ${LINK_FLAG_PREFIX} flann_cpp_s
-                      ${LINK_FLAG_POSTFIX} ${HDF5_LIBRARIES}
-                        ${MPI_LIBRARIES} ${Boost_LIBRARIES})
+  target_link_libraries(
+    flann_mpi_server
+    ${LINK_FLAG_PREFIX}
+    flann_cpp_s
+    ${LINK_FLAG_POSTFIX}
+    ${HDF5_LIBRARIES}
+    ${MPI_LIBRARIES}
+    ${Boost_LIBRARIES})
 
   add_executable(flann_mpi_client flann/mpi/flann_mpi_client.cpp)
-  target_link_libraries(flann_mpi_client ${LINK_FLAG_PREFIX} flann_cpp_s
-                      ${LINK_FLAG_POSTFIX} ${HDF5_LIBRARIES}
-                        ${MPI_LIBRARIES} ${Boost_LIBRARIES})
+  target_link_libraries(
+    flann_mpi_client
+    ${LINK_FLAG_PREFIX}
+    flann_cpp_s
+    ${LINK_FLAG_POSTFIX}
+    ${HDF5_LIBRARIES}
+    ${MPI_LIBRARIES}
+    ${Boost_LIBRARIES})
 endif()
 
 if(NOT SKBUILD)

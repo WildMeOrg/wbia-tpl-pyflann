@@ -2,6 +2,8 @@
 
 set -ex
 
+pip install -r requirements/build.txt
+
 brew install \
     pkg-config \
     boost \

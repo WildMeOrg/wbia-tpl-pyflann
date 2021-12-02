@@ -66,7 +66,7 @@ class Test_PyFlann_add_remove(unittest.TestCase):
             'at least some of the returned points should be from the added set',
         )
 
-    @pytest.mark.skip(reason="unused feature")
+    @pytest.mark.skip(reason='unused feature')
     def test_add(self):
         """
         Test simple case of add_points
@@ -104,7 +104,7 @@ class Test_PyFlann_add_remove(unittest.TestCase):
             'most old points should be found next',
         )
 
-    @pytest.mark.skip(reason="unused feature")
+    @pytest.mark.skip(reason='unused feature')
     def test_remove(self):
         """
         Test simple case of remove points
