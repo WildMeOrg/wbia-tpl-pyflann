@@ -1,4 +1,4 @@
-=====================
+?=====================
 Wildbook IA - PyFlann
 =====================
 
@@ -50,10 +50,9 @@ Conditions of use
 
 FLANN is distributed under the terms of the [BSD License](https://github.com/mariusmuja/flann/blob/master/COPYING).
 
-
-.. |Build| image:: https://img.shields.io/github/workflow/status/WildbookOrg/wbia-tpl-pyflann/Build%20and%20upload%20to%20PyPI/master
-    :target: https://github.com/WildbookOrg/wbia-tpl-pyflann/actions?query=branch%3Amaster+workflow%3A%22Build+and+upload+to+PyPI%22
-    :alt: Build and upload to PyPI (master)
+.. |Build| image:: https://img.shields.io/github/workflow/status/WildMeOrg/wbia-tpl-pyflann/Build%20and%20upload%20to%20PyPI/main
+    :target: https://github.com/WildMeOrg/wbia-tpl-pyflann/actions?query=branch%3Amain+workflow%3A%22Build+and+upload+to+PyPI%22
+    :alt: Build and upload to PyPI (main)
 
 .. |Pypi| image:: https://img.shields.io/pypi/v/wbia-pyflann.svg
    :target: https://pypi.python.org/pypi/wbia-pyflann
