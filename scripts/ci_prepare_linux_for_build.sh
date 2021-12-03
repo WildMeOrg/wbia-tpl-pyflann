@@ -2,12 +2,12 @@
 
 set -ex
 
+export CUR_LOC="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
 pip install -r requirements/build.txt
 
 if command -v yum &> /dev/null
 then
-    yum update
-
     yum install -y \
         pkgconfig \
         boost \
@@ -17,8 +17,6 @@ then
         hdf5-openmpi \
         lz4-devel
 else
-    apt-get update
-
     apt-get install \
         pkg-config \
         libboost-all-dev \
