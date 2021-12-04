@@ -22,11 +22,20 @@ link_directories(${LZ4_LIBRARY_DIRS})
 include_directories(${LZ4_INCLUDE_DIRS})
 
 add_library(flann_cpp_s STATIC ${CPP_SOURCES})
+
+if(USE_MPI)
+  target_link_libraries(flann_cpp_s ${MPI_LIBRARIES})
+endif()
+
 target_link_libraries(flann_cpp_s ${LZ4_LIBRARIES})
 target_include_directories(flann_cpp_s PUBLIC ${LZ4_INCLUDE_DIRS})
 
 if(OPENMP_FOUND)
   target_link_libraries(flann_cpp_s ${OpenMP_CXX_LIBRARIES})
+endif()
+
+if(Boost_FOUND)
+  target_link_libraries(flann_cpp_s ${Boost_LIBRARIES})
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_CLANG)
@@ -38,11 +47,20 @@ set_property(TARGET flann_cpp_s PROPERTY COMPILE_DEFINITIONS FLANN_STATIC
 
 if(BUILD_C_BINDINGS)
   add_library(flann_s STATIC ${C_SOURCES})
+
+  if(USE_MPI)
+    target_link_libraries(flann_s ${MPI_LIBRARIES})
+  endif()
+
   target_link_libraries(flann_s ${LZ4_LIBRARIES})
   target_include_directories(flann_s PUBLIC ${LZ4_INCLUDE_DIRS})
 
   if(OPENMP_FOUND)
     target_link_libraries(flann_s ${OpenMP_CXX_LIBRARIES})
+  endif()
+
+  if(Boost_FOUND)
+    target_link_libraries(flann_s ${Boost_LIBRARIES})
   endif()
 
   if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_CLANG)
