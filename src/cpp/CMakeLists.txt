@@ -164,7 +164,10 @@ if(BUILD_CUDA_LIB)
 endif()
 
 if(USE_MPI AND HDF5_IS_PARALLEL)
+  link_directories(${FLANN_LIB_INSTALL_DIR})
+
   add_executable(flann_mpi_server flann/mpi/flann_mpi_server.cpp)
+  target_include_directories(flann_mpi_server PUBLIC ${FLANN_LIB_INSTALL_DIR})
   target_link_libraries(
     flann_mpi_server
     flann_cpp
@@ -173,6 +176,7 @@ if(USE_MPI AND HDF5_IS_PARALLEL)
     ${Boost_LIBRARIES})
 
   add_executable(flann_mpi_client flann/mpi/flann_mpi_client.cpp)
+  target_include_directories(flann_mpi_client PUBLIC ${FLANN_LIB_INSTALL_DIR})
   target_link_libraries(
     flann_mpi_client
     flann_cpp
