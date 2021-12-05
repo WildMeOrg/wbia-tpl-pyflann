@@ -18,11 +18,10 @@ file(GLOB_RECURSE CPP_SOURCES flann_cpp.cpp lz4.c lz4hc.c)
 file(GLOB_RECURSE CU_SOURCES *.cu)
 file(GLOB_RECURSE HEADER_SOURCES flann.h lz4hc.h lz4.h)
 
-add_library(flann_cpp_s STATIC ${CPP_SOURCES})
+link_directories(${LZ4_LIBRARY_DIRS})
+include_directories(${LZ4_INCLUDE_DIRS})
 
-if(HDF5_FOUND)
-  target_link_libraries(flann_cpp_s ${HDF5_LIBRARIES})
-endif()
+add_library(flann_cpp_s STATIC ${CPP_SOURCES})
 
 if(USE_MPI)
   target_link_libraries(flann_cpp_s ${MPI_LIBRARIES})
@@ -51,16 +50,14 @@ set_property(TARGET flann_cpp_s PROPERTY COMPILE_DEFINITIONS FLANN_STATIC
 if(BUILD_C_BINDINGS)
   add_library(flann_s STATIC ${C_SOURCES})
 
-  if(HDF5_FOUND)
-    target_link_libraries(flann_s ${HDF5_LIBRARIES})
-  endif()
-
   if(USE_MPI)
     target_link_libraries(flann_s ${MPI_LIBRARIES})
   endif()
 
-  target_link_libraries(flann_s ${LZ4_LIBRARIES})
-  target_include_directories(flann_s PUBLIC ${LZ4_INCLUDE_DIRS})
+  if(LZ4_FOUND)
+    target_link_libraries(flann_s ${LZ4_LIBRARIES})
+    target_include_directories(flann_s PUBLIC ${LZ4_INCLUDE_DIRS})
+  endif()
 
   if(OPENMP_FOUND)
     target_link_libraries(flann_s ${OpenMP_C_LIBRARIES})
@@ -164,24 +161,22 @@ if(BUILD_CUDA_LIB)
 endif()
 
 if(USE_MPI AND HDF5_IS_PARALLEL)
-  link_directories(${FLANN_LIB_INSTALL_DIR})
-
   add_executable(flann_mpi_server flann/mpi/flann_mpi_server.cpp)
-  target_include_directories(flann_mpi_server PUBLIC ${FLANN_LIB_INSTALL_DIR})
   target_link_libraries(
     flann_mpi_server
-    flann_cpp
-    ${LINK_FLAG_PREFIX} flann_cpp_s ${LINK_FLAG_POSTFIX}
+    ${LINK_FLAG_PREFIX}
+    flann_cpp_s
+    ${LINK_FLAG_POSTFIX}
     ${HDF5_LIBRARIES}
     ${MPI_LIBRARIES}
     ${Boost_LIBRARIES})
 
   add_executable(flann_mpi_client flann/mpi/flann_mpi_client.cpp)
-  target_include_directories(flann_mpi_client PUBLIC ${FLANN_LIB_INSTALL_DIR})
   target_link_libraries(
     flann_mpi_client
-    flann_cpp
-    ${LINK_FLAG_PREFIX} flann_cpp_s ${LINK_FLAG_POSTFIX}
+    ${LINK_FLAG_PREFIX}
+    flann_cpp_s
+    ${LINK_FLAG_POSTFIX}
     ${HDF5_LIBRARIES}
     ${MPI_LIBRARIES}
     ${Boost_LIBRARIES})
