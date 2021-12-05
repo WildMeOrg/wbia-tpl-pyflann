@@ -171,6 +171,7 @@ if(USE_MPI AND HDF5_IS_PARALLEL)
   target_link_libraries(
     flann_mpi_server
     flann_cpp
+    ${LINK_FLAG_PREFIX} flann_cpp_s ${LINK_FLAG_POSTFIX}
     ${HDF5_LIBRARIES}
     ${MPI_LIBRARIES}
     ${Boost_LIBRARIES})
@@ -180,6 +181,7 @@ if(USE_MPI AND HDF5_IS_PARALLEL)
   target_link_libraries(
     flann_mpi_client
     flann_cpp
+    ${LINK_FLAG_PREFIX} flann_cpp_s ${LINK_FLAG_POSTFIX}
     ${HDF5_LIBRARIES}
     ${MPI_LIBRARIES}
     ${Boost_LIBRARIES})
