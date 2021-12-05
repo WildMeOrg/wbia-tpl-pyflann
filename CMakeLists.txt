@@ -119,6 +119,7 @@ if(NOT BUILD_C_BINDINGS)
 endif()
 
 find_hdf5()
+
 if(NOT HDF5_FOUND)
   message(WARNING "hdf5 library not found, some tests will not be run")
 else()
@@ -128,6 +129,7 @@ endif()
 if(USE_MPI OR HDF5_IS_PARALLEL)
   find_package(MPI)
 endif()
+
 if(HDF5_IS_PARALLEL)
   if(NOT MPI_FOUND)
     message(
@@ -157,6 +159,7 @@ endif(USE_MPI)
 if(USE_MPI AND HDF5_IS_PARALLEL)
   find_package(Boost COMPONENTS mpi system serialization thread REQUIRED)
   include_directories(${Boost_INCLUDE_DIRS})
+  link_directories(${Boost_LIBRARY_DIRS})
   add_definitions("-DHAVE_MPI")
 endif()
 
@@ -189,6 +192,11 @@ endif(BUILD_CUDA_LIB)
 find_package(PkgConfig REQUIRED)
 
 find_package(LZ4)
+
+if(LZ4_FOUND)
+  link_directories(${LZ4_LIBRARY_DIRS})
+  include_directories(${LZ4_INCLUDE_DIRS})
+endif()
 
 # set the C/C++ include path to the "include" directory
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/src/cpp)

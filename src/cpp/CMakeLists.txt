@@ -18,17 +18,20 @@ file(GLOB_RECURSE CPP_SOURCES flann_cpp.cpp lz4.c lz4hc.c)
 file(GLOB_RECURSE CU_SOURCES *.cu)
 file(GLOB_RECURSE HEADER_SOURCES flann.h lz4hc.h lz4.h)
 
-link_directories(${LZ4_LIBRARY_DIRS})
-include_directories(${LZ4_INCLUDE_DIRS})
-
 add_library(flann_cpp_s STATIC ${CPP_SOURCES})
+
+if(HDF5_FOUND)
+  target_link_libraries(flann_cpp_s ${HDF5_LIBRARIES})
+endif()
 
 if(USE_MPI)
   target_link_libraries(flann_cpp_s ${MPI_LIBRARIES})
 endif()
 
-target_link_libraries(flann_cpp_s ${LZ4_LIBRARIES})
-target_include_directories(flann_cpp_s PUBLIC ${LZ4_INCLUDE_DIRS})
+if(LZ4_FOUND)
+  target_link_libraries(flann_cpp_s ${LZ4_LIBRARIES})
+  target_include_directories(flann_cpp_s PUBLIC ${LZ4_INCLUDE_DIRS})
+endif()
 
 if(OPENMP_FOUND)
   target_link_libraries(flann_cpp_s ${OpenMP_CXX_LIBRARIES})
@@ -48,6 +51,10 @@ set_property(TARGET flann_cpp_s PROPERTY COMPILE_DEFINITIONS FLANN_STATIC
 if(BUILD_C_BINDINGS)
   add_library(flann_s STATIC ${C_SOURCES})
 
+  if(HDF5_FOUND)
+    target_link_libraries(flann_s ${HDF5_LIBRARIES})
+  endif()
+
   if(USE_MPI)
     target_link_libraries(flann_s ${MPI_LIBRARIES})
   endif()
@@ -56,7 +63,7 @@ if(BUILD_C_BINDINGS)
   target_include_directories(flann_s PUBLIC ${LZ4_INCLUDE_DIRS})
 
   if(OPENMP_FOUND)
-    target_link_libraries(flann_s ${OpenMP_CXX_LIBRARIES})
+    target_link_libraries(flann_s ${OpenMP_C_LIBRARIES})
   endif()
 
   if(Boost_FOUND)
@@ -160,9 +167,7 @@ if(USE_MPI AND HDF5_IS_PARALLEL)
   add_executable(flann_mpi_server flann/mpi/flann_mpi_server.cpp)
   target_link_libraries(
     flann_mpi_server
-    ${LINK_FLAG_PREFIX}
-    flann_cpp_s
-    ${LINK_FLAG_POSTFIX}
+    flann_cpp
     ${HDF5_LIBRARIES}
     ${MPI_LIBRARIES}
     ${Boost_LIBRARIES})
@@ -170,9 +175,7 @@ if(USE_MPI AND HDF5_IS_PARALLEL)
   add_executable(flann_mpi_client flann/mpi/flann_mpi_client.cpp)
   target_link_libraries(
     flann_mpi_client
-    ${LINK_FLAG_PREFIX}
-    flann_cpp_s
-    ${LINK_FLAG_POSTFIX}
+    flann_cpp
     ${HDF5_LIBRARIES}
     ${MPI_LIBRARIES}
     ${Boost_LIBRARIES})
