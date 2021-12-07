@@ -149,7 +149,8 @@ class FLANN(object):
 
     def __del__(self):
         # print('FLANN OBJECT IS DELETED')
-        self.delete_index()
+        # self.delete_index()
+        pass
 
     @property
     def shape(self):
