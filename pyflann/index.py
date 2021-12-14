@@ -138,8 +138,6 @@ class FLANN(object):
 
         self.__curindex = None
         self.__curindex_data = None  # pointer to keep the numpy data alive
-        self.__added_data = []  # contained to keep any added numpy data alive
-        self.__removed_ids = []  # contains the point ids that have been removed
         self.__curindex_type = None
         self.__added_data = []  # contained to keep any added numpy data alive
         self.__removed_ids = []  # contains the point ids that have been removed
@@ -148,9 +146,8 @@ class FLANN(object):
         self.__flann_parameters.update(kwargs)
 
     def __del__(self):
-        # print('FLANN OBJECT IS DELETED')
-        # self.delete_index()
-        pass
+        print('FLANN OBJECT IS DELETED')
+        self.delete_index()
 
     @property
     def shape(self):
@@ -361,7 +358,6 @@ class FLANN(object):
             )
             self.__curindex = None
             self.__curindex_data = None
-            self.__added_data = []
             self.__curindex_type = None
             self.__added_data = []
             self.__removed_ids = []
@@ -380,11 +376,8 @@ class FLANN(object):
             )
 
         self.__curindex_data = pts
-        self.__added_data = []
-        self.__removed_ids = []
         self.__curindex_type = pts.dtype.type
         self.__added_data = []
-        self.__removed_ids = []
         self.__removed_ids = []
 
     def nn_index(self, qpts, num_neighbors=1, **kwargs):
@@ -491,6 +484,7 @@ class FLANN(object):
             )
             self.__curindex = None
             self.__curindex_data = None
+            self.__curindex_type = None
             self.__added_data = []
             self.__removed_ids = []
 
