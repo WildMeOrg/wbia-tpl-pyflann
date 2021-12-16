@@ -1,36 +1,71 @@
-
 <!DOCTYPE html>
-
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pyflann.index &#8212; wbia-pyflann 3.1.0 documentation</title>
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyflann.index &mdash; wbia-pyflann 4.0.3.dev2+dirty documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-   
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
 
-  </head><body>
-  
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> wbia-pyflann
+          </a>
+              <div class="version">
+                4.0.3.dev2+dirty
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pyflann.html">pyflann package</a></li>
+</ul>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          
+        </div>
+      </div>
+    </nav>
 
-          <div class="body" role="main">
-            
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">wbia-pyflann</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      <li>pyflann.index</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
   <h1>Source code for pyflann.index</h1><div class="highlight"><pre>
 <span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="c1"># Copyright 2008-2010  Marius Muja (mariusm@cs.ubc.ca). All rights reserved.</span>
@@ -172,8 +207,6 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">__curindex</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__curindex_data</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># pointer to keep the numpy data alive</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__added_data</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># contained to keep any added numpy data alive</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__removed_ids</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># contains the point ids that have been removed</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__curindex_type</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__added_data</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># contained to keep any added numpy data alive</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__removed_ids</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># contains the point ids that have been removed</span>
@@ -182,7 +215,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__flann_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># print(&#39;FLANN OBJECT IS DELETED&#39;)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;FLANN OBJECT IS DELETED&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">delete_index</span><span class="p">()</span>
 
     <span class="nd">@property</span>
@@ -194,7 +227,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <div class="viewcode-block" id="FLANN.get_indexed_shape"><a class="viewcode-back" href="../../pyflann.html#pyflann.index.FLANN.get_indexed_shape">[docs]</a>    <span class="k">def</span> <span class="nf">get_indexed_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; returns the shape of the data being indexed &quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;returns the shape of the data being indexed&quot;&quot;&quot;</span>
         <span class="n">npts</span><span class="p">,</span> <span class="n">dim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__curindex_data</span><span class="o">.</span><span class="n">shape</span>
         <span class="k">for</span> <span class="n">_extra</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__added_data</span><span class="p">:</span>
             <span class="n">npts</span> <span class="o">+=</span> <span class="n">_extra</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -394,7 +427,6 @@
             <span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__curindex</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__curindex_data</span> <span class="o">=</span> <span class="kc">None</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">__added_data</span> <span class="o">=</span> <span class="p">[]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__curindex_type</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__added_data</span> <span class="o">=</span> <span class="p">[]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__removed_ids</span> <span class="o">=</span> <span class="p">[]</span>
@@ -413,11 +445,8 @@
             <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">__curindex_data</span> <span class="o">=</span> <span class="n">pts</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__added_data</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__removed_ids</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__curindex_type</span> <span class="o">=</span> <span class="n">pts</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">type</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__added_data</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__removed_ids</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__removed_ids</span> <span class="o">=</span> <span class="p">[]</span></div>
 
 <div class="viewcode-block" id="FLANN.nn_index"><a class="viewcode-back" href="../../pyflann.html#pyflann.index.FLANN.nn_index">[docs]</a>    <span class="k">def</span> <span class="nf">nn_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qpts</span><span class="p">,</span> <span class="n">num_neighbors</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -524,6 +553,7 @@
             <span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__curindex</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__curindex_data</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__curindex_type</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__added_data</span> <span class="o">=</span> <span class="p">[]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__removed_ids</span> <span class="o">=</span> <span class="p">[]</span></div>
 
@@ -618,7 +648,12 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__flann_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
 
         <span class="n">numclusters</span> <span class="o">=</span> <span class="n">flann</span><span class="o">.</span><span class="n">compute_cluster_centers</span><span class="p">[</span><span class="n">pts</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">type</span><span class="p">](</span>
-            <span class="n">pts</span><span class="p">,</span> <span class="n">npts</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">num_clusters</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">pointer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__flann_parameters</span><span class="p">),</span>
+            <span class="n">pts</span><span class="p">,</span>
+            <span class="n">npts</span><span class="p">,</span>
+            <span class="n">dim</span><span class="p">,</span>
+            <span class="n">num_clusters</span><span class="p">,</span>
+            <span class="n">result</span><span class="p">,</span>
+            <span class="n">pointer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__flann_parameters</span><span class="p">),</span>
         <span class="p">)</span>
         <span class="k">if</span> <span class="n">numclusters</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">FLANNException</span><span class="p">(</span><span class="s1">&#39;Error occured during clustering procedure.&#39;</span><span class="p">)</span>
@@ -636,69 +671,31 @@
             <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;random_seed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__rn_gen</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="mi">30</span><span class="p">)</span></div>
 </pre></div>
 
+           </div>
           </div>
-          
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Wild Me.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../index.html">wbia-pyflann</a></h1>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
 
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../pyflann.html">pyflann package</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../index.html">Module code</a><ul>
-  </ul></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2020, Wild Me.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-    </div>
-
-    
-
-    
-  </body>
+</body>
 </html>

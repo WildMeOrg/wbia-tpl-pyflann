@@ -1,810 +1,45 @@
-
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pyflann package &#8212; wbia-pyflann 3.1.0 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyflann package &mdash; wbia-pyflann latest documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Welcome to pyflann’s documentation!" href="index.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    <link rel="prev" title="Welcome to pyflann’s documentation!" href="index.html" /> 
+</head>
 
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          
-
-          <div class="body" role="main">
-            
-  <div class="section" id="pyflann-package">
-<h1>pyflann package<a class="headerlink" href="#pyflann-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> wbia-pyflann
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
 </div>
-<div class="section" id="module-pyflann.__main__">
-<span id="pyflann-main-module"></span><h2>pyflann.__main__ module<a class="headerlink" href="#module-pyflann.__main__" title="Permalink to this headline">¶</a></h2>
-<dl class="py function">
-<dt id="pyflann.__main__.main">
-<code class="sig-prename descclassname">pyflann.__main__.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/__main__.html#main"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.__main__.main" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</div>
-<div class="section" id="module-pyflann._version">
-<span id="pyflann-version-module"></span><h2>pyflann._version module<a class="headerlink" href="#module-pyflann._version" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-pyflann.exceptions">
-<span id="pyflann-exceptions-module"></span><h2>pyflann.exceptions module<a class="headerlink" href="#module-pyflann.exceptions" title="Permalink to this headline">¶</a></h2>
-<dl class="py exception">
-<dt id="pyflann.exceptions.FLANNException">
-<em class="property">exception </em><code class="sig-prename descclassname">pyflann.exceptions.</code><code class="sig-name descname">FLANNException</code><a class="reference internal" href="_modules/pyflann/exceptions.html#FLANNException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.exceptions.FLANNException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-</dd></dl>
-
-</div>
-<div class="section" id="module-pyflann.flann_ctypes">
-<span id="pyflann-flann-ctypes-module"></span><h2>pyflann.flann_ctypes module<a class="headerlink" href="#module-pyflann.flann_ctypes" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
-<dt id="pyflann.flann_ctypes.CustomStructure">
-<em class="property">class </em><code class="sig-prename descclassname">pyflann.flann_ctypes.</code><code class="sig-name descname">CustomStructure</code><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#CustomStructure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.flann_ctypes.CustomStructure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_ctypes.Structure</span></code></p>
-<p>This class extends the functionality of the ctype’s structure
-class by adding custom default values to the fields and a way of translating
-field types.</p>
-<dl class="py method">
-<dt id="pyflann.flann_ctypes.CustomStructure.keys">
-<code class="sig-name descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#CustomStructure.keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.flann_ctypes.CustomStructure.keys" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.flann_ctypes.CustomStructure.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dict</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#CustomStructure.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.flann_ctypes.CustomStructure.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="pyflann.flann_ctypes.FLANNParameters">
-<em class="property">class </em><code class="sig-prename descclassname">pyflann.flann_ctypes.</code><code class="sig-name descname">FLANNParameters</code><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#FLANNParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pyflann.flann_ctypes.CustomStructure" title="pyflann.flann_ctypes.CustomStructure"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyflann.flann_ctypes.CustomStructure</span></code></a></p>
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.algorithm">
-<code class="sig-name descname">algorithm</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.algorithm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.branching">
-<code class="sig-name descname">branching</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.branching" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.build_weight">
-<code class="sig-name descname">build_weight</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.build_weight" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.cb_index">
-<code class="sig-name descname">cb_index</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.cb_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.centers_init">
-<code class="sig-name descname">centers_init</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.centers_init" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.checks">
-<code class="sig-name descname">checks</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.checks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.cores">
-<code class="sig-name descname">cores</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.cores" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.eps">
-<code class="sig-name descname">eps</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.eps" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.iterations">
-<code class="sig-name descname">iterations</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.iterations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.key_size_">
-<code class="sig-name descname">key_size_</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.key_size_" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.leaf_max_size">
-<code class="sig-name descname">leaf_max_size</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.leaf_max_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.log_level">
-<code class="sig-name descname">log_level</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.log_level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.max_neighbors">
-<code class="sig-name descname">max_neighbors</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.max_neighbors" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.memory_weight">
-<code class="sig-name descname">memory_weight</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.memory_weight" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.multi_probe_level_">
-<code class="sig-name descname">multi_probe_level_</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.multi_probe_level_" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.random_seed">
-<code class="sig-name descname">random_seed</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.random_seed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.sample_fraction">
-<code class="sig-name descname">sample_fraction</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.sample_fraction" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.sorted">
-<code class="sig-name descname">sorted</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.sorted" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.table_number_">
-<code class="sig-name descname">table_number_</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.table_number_" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.target_precision">
-<code class="sig-name descname">target_precision</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.target_precision" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.flann_ctypes.FLANNParameters.trees">
-<code class="sig-name descname">trees</code><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.trees" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="pyflann.flann_ctypes.FlannLib">
-<em class="property">class </em><code class="sig-prename descclassname">pyflann.flann_ctypes.</code><code class="sig-name descname">FlannLib</code><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#FlannLib"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.flann_ctypes.FlannLib" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="pyflann.flann_ctypes.define_functions">
-<code class="sig-prename descclassname">pyflann.flann_ctypes.</code><code class="sig-name descname">define_functions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fmtstr</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#define_functions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.flann_ctypes.define_functions" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt id="pyflann.flann_ctypes.ensure_2d_array">
-<code class="sig-prename descclassname">pyflann.flann_ctypes.</code><code class="sig-name descname">ensure_2d_array</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arr</span></em>, <em class="sig-param"><span class="n">flags</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#ensure_2d_array"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.flann_ctypes.ensure_2d_array" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt id="pyflann.flann_ctypes.load_flann_library">
-<code class="sig-prename descclassname">pyflann.flann_ctypes.</code><code class="sig-name descname">load_flann_library</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#load_flann_library"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.flann_ctypes.load_flann_library" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>CommandLine:</dt><dd><p>python -c “import pyflann” –verbose</p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="module-pyflann.index">
-<span id="pyflann-index-module"></span><h2>pyflann.index module<a class="headerlink" href="#module-pyflann.index" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
-<dt id="pyflann.index.FLANN">
-<em class="property">class </em><code class="sig-prename descclassname">pyflann.index.</code><code class="sig-name descname">FLANN</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>This class defines a python interface to the FLANN lirary.</p>
-<p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyflann</span> <span class="kn">import</span> <span class="n">FLANN</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dvecs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">qvecs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">flann</span> <span class="o">=</span> <span class="n">FLANN</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">params</span> <span class="o">=</span> <span class="n">flann</span><span class="o">.</span><span class="n">build_index</span><span class="p">(</span><span class="n">dvecs</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="py method">
-<dt id="pyflann.index.FLANN.add_points">
-<code class="sig-name descname">add_points</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pts</span></em>, <em class="sig-param"><span class="n">rebuild_threshold</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.add_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.add_points" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds points to pre-built index.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pts</strong> – 2D numpy array of points.</p></li>
-<li><p><strong>rebuild_threshold</strong> – reallocs index when it grows by factor of
-<cite>rebuild_threshold</cite>. A smaller value results is more space
-efficient but less computationally efficient. Must be greater
-than 1.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.build_index">
-<code class="sig-name descname">build_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pts</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.build_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.build_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>This builds and internally stores an index to be used for
-future nearest neighbor matchings.  It erases any previously
-stored indexes, so use multiple instances of this class to
-work with multiple stored indices.  Use nn_index(…) to find
-the nearest neighbors in this index.</p>
-<p>pts is a 2d numpy array or matrix. All the computation is done
-in np.float32 type, but pts may be any type that is convertable
-to np.float32.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.delete_index">
-<code class="sig-name descname">delete_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.delete_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.delete_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes the current index freeing all the momory it uses.
-The memory used by the dataset that was indexed is not freed
-unless there are no other references to those numpy arrays.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.get_indexed_data">
-<code class="sig-name descname">get_indexed_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.get_indexed_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.get_indexed_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns all the data indexed by the FLANN object</p>
-<p>(this returns points that have been removed but still exist in memory)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.get_indexed_shape">
-<code class="sig-name descname">get_indexed_shape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.get_indexed_shape"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.get_indexed_shape" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns the shape of the data being indexed</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.hierarchical_kmeans">
-<code class="sig-name descname">hierarchical_kmeans</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pts</span></em>, <em class="sig-param"><span class="n">branch_size</span></em>, <em class="sig-param"><span class="n">num_branches</span></em>, <em class="sig-param"><span class="n">max_iterations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.hierarchical_kmeans"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.hierarchical_kmeans" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clusters the data by using multiple runs of kmeans to
-recursively partition the dataset.  The number of resulting
-clusters is given by (branch_size-1)*num_branches+1.</p>
-<p>This method can be significantly faster when the number of
-desired clusters is quite large (e.g. a hundred or more).
-Higher branch sizes are slower but may give better results.</p>
-<p>If dtype is None (the default), the array returned is the same
-type as pts.  Otherwise, the returned array is of type dtype.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.kmeans">
-<code class="sig-name descname">kmeans</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pts</span></em>, <em class="sig-param"><span class="n">num_clusters</span></em>, <em class="sig-param"><span class="n">max_iterations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.kmeans"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.kmeans" title="Permalink to this definition">¶</a></dt>
-<dd><p>Runs kmeans on pts with num_clusters centroids.  Returns a
-numpy array of size num_clusters x dim.</p>
-<p>If max_iterations is not None, the algorithm terminates after
-the given number of iterations regardless of convergence.  The
-default is to run until convergence.</p>
-<p>If dtype is None (the default), the array returned is the same
-type as pts.  Otherwise, the returned array is of type dtype.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.load_index">
-<code class="sig-name descname">load_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em>, <em class="sig-param"><span class="n">pts</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.load_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.load_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>Loads an index previously saved to disk.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.nn">
-<code class="sig-name descname">nn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pts</span></em>, <em class="sig-param"><span class="n">qpts</span></em>, <em class="sig-param"><span class="n">num_neighbors</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.nn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.nn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the num_neighbors nearest points in dataset for each point
-in testset.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.nn_index">
-<code class="sig-name descname">nn_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">qpts</span></em>, <em class="sig-param"><span class="n">num_neighbors</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.nn_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.nn_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>For each point in querypts, (which may be a single point), it
-returns the num_neighbors nearest points in the index built by
-calling build_index.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.nn_radius">
-<code class="sig-name descname">nn_radius</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">query</span></em>, <em class="sig-param"><span class="n">radius</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.nn_radius"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.nn_radius" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.remove_point">
-<code class="sig-name descname">remove_point</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">idx</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.remove_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.remove_point" title="Permalink to this definition">¶</a></dt>
-<dd><p>Removes a point from a pre-built index.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.remove_points">
-<code class="sig-name descname">remove_points</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id_list</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.remove_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.remove_points" title="Permalink to this definition">¶</a></dt>
-<dd><p>Removes multiple points from the index</p>
-<dl class="simple">
-<dt>Params:</dt><dd><p>id_list = point ids to be removed</p>
-</dd>
-</dl>
-<p>Returns: void</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.save_index">
-<code class="sig-name descname">save_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.save_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.save_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>This saves the index to a disk file.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.shape">
-<em class="property">property </em><code class="sig-name descname">shape</code><a class="headerlink" href="#pyflann.index.FLANN.shape" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.used_memory">
-<code class="sig-name descname">used_memory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.used_memory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.used_memory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the amount of memory used by the index</p>
-<p>Returns: int</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.index.FLANN.used_memory_dataset">
-<code class="sig-name descname">used_memory_dataset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.used_memory_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.FLANN.used_memory_dataset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the amount of memory used by the dataset</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt id="pyflann.index.set_distance_type">
-<code class="sig-prename descclassname">pyflann.index.</code><code class="sig-name descname">set_distance_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">distance_type</span></em>, <em class="sig-param"><span class="n">order</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#set_distance_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.set_distance_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the distance type used. Possible values: euclidean, manhattan, minkowski, max_dist,
-hik, hellinger, cs, kl.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="pyflann.index.to_bytes">
-<code class="sig-prename descclassname">pyflann.index.</code><code class="sig-name descname">to_bytes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">string</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#to_bytes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.index.to_bytes" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</div>
-<div class="section" id="module-pyflann">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyflann" title="Permalink to this headline">¶</a></h2>
-<p>mkinit pyflann</p>
-<dl class="py class">
-<dt id="pyflann.CustomStructure">
-<em class="property">class </em><code class="sig-prename descclassname">pyflann.</code><code class="sig-name descname">CustomStructure</code><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#CustomStructure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.CustomStructure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_ctypes.Structure</span></code></p>
-<p>This class extends the functionality of the ctype’s structure
-class by adding custom default values to the fields and a way of translating
-field types.</p>
-<dl class="py method">
-<dt id="pyflann.CustomStructure.keys">
-<code class="sig-name descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#CustomStructure.keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.CustomStructure.keys" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.CustomStructure.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dict</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#CustomStructure.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.CustomStructure.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="pyflann.FLANN">
-<em class="property">class </em><code class="sig-prename descclassname">pyflann.</code><code class="sig-name descname">FLANN</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>This class defines a python interface to the FLANN lirary.</p>
-<p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyflann</span> <span class="kn">import</span> <span class="n">FLANN</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dvecs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">qvecs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">flann</span> <span class="o">=</span> <span class="n">FLANN</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">params</span> <span class="o">=</span> <span class="n">flann</span><span class="o">.</span><span class="n">build_index</span><span class="p">(</span><span class="n">dvecs</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="py method">
-<dt id="pyflann.FLANN.add_points">
-<code class="sig-name descname">add_points</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pts</span></em>, <em class="sig-param"><span class="n">rebuild_threshold</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.add_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.add_points" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds points to pre-built index.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pts</strong> – 2D numpy array of points.</p></li>
-<li><p><strong>rebuild_threshold</strong> – reallocs index when it grows by factor of
-<cite>rebuild_threshold</cite>. A smaller value results is more space
-efficient but less computationally efficient. Must be greater
-than 1.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.build_index">
-<code class="sig-name descname">build_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pts</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.build_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.build_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>This builds and internally stores an index to be used for
-future nearest neighbor matchings.  It erases any previously
-stored indexes, so use multiple instances of this class to
-work with multiple stored indices.  Use nn_index(…) to find
-the nearest neighbors in this index.</p>
-<p>pts is a 2d numpy array or matrix. All the computation is done
-in np.float32 type, but pts may be any type that is convertable
-to np.float32.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.delete_index">
-<code class="sig-name descname">delete_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.delete_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.delete_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes the current index freeing all the momory it uses.
-The memory used by the dataset that was indexed is not freed
-unless there are no other references to those numpy arrays.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.get_indexed_data">
-<code class="sig-name descname">get_indexed_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.get_indexed_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.get_indexed_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns all the data indexed by the FLANN object</p>
-<p>(this returns points that have been removed but still exist in memory)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.get_indexed_shape">
-<code class="sig-name descname">get_indexed_shape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.get_indexed_shape"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.get_indexed_shape" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns the shape of the data being indexed</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.hierarchical_kmeans">
-<code class="sig-name descname">hierarchical_kmeans</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pts</span></em>, <em class="sig-param"><span class="n">branch_size</span></em>, <em class="sig-param"><span class="n">num_branches</span></em>, <em class="sig-param"><span class="n">max_iterations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.hierarchical_kmeans"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.hierarchical_kmeans" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clusters the data by using multiple runs of kmeans to
-recursively partition the dataset.  The number of resulting
-clusters is given by (branch_size-1)*num_branches+1.</p>
-<p>This method can be significantly faster when the number of
-desired clusters is quite large (e.g. a hundred or more).
-Higher branch sizes are slower but may give better results.</p>
-<p>If dtype is None (the default), the array returned is the same
-type as pts.  Otherwise, the returned array is of type dtype.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.kmeans">
-<code class="sig-name descname">kmeans</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pts</span></em>, <em class="sig-param"><span class="n">num_clusters</span></em>, <em class="sig-param"><span class="n">max_iterations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.kmeans"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.kmeans" title="Permalink to this definition">¶</a></dt>
-<dd><p>Runs kmeans on pts with num_clusters centroids.  Returns a
-numpy array of size num_clusters x dim.</p>
-<p>If max_iterations is not None, the algorithm terminates after
-the given number of iterations regardless of convergence.  The
-default is to run until convergence.</p>
-<p>If dtype is None (the default), the array returned is the same
-type as pts.  Otherwise, the returned array is of type dtype.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.load_index">
-<code class="sig-name descname">load_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em>, <em class="sig-param"><span class="n">pts</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.load_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.load_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>Loads an index previously saved to disk.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.nn">
-<code class="sig-name descname">nn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pts</span></em>, <em class="sig-param"><span class="n">qpts</span></em>, <em class="sig-param"><span class="n">num_neighbors</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.nn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.nn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the num_neighbors nearest points in dataset for each point
-in testset.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.nn_index">
-<code class="sig-name descname">nn_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">qpts</span></em>, <em class="sig-param"><span class="n">num_neighbors</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.nn_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.nn_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>For each point in querypts, (which may be a single point), it
-returns the num_neighbors nearest points in the index built by
-calling build_index.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.nn_radius">
-<code class="sig-name descname">nn_radius</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">query</span></em>, <em class="sig-param"><span class="n">radius</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.nn_radius"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.nn_radius" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.remove_point">
-<code class="sig-name descname">remove_point</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">idx</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.remove_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.remove_point" title="Permalink to this definition">¶</a></dt>
-<dd><p>Removes a point from a pre-built index.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.remove_points">
-<code class="sig-name descname">remove_points</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id_list</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.remove_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.remove_points" title="Permalink to this definition">¶</a></dt>
-<dd><p>Removes multiple points from the index</p>
-<dl class="simple">
-<dt>Params:</dt><dd><p>id_list = point ids to be removed</p>
-</dd>
-</dl>
-<p>Returns: void</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.save_index">
-<code class="sig-name descname">save_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.save_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.save_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>This saves the index to a disk file.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.shape">
-<em class="property">property </em><code class="sig-name descname">shape</code><a class="headerlink" href="#pyflann.FLANN.shape" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.used_memory">
-<code class="sig-name descname">used_memory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.used_memory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.used_memory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the amount of memory used by the index</p>
-<p>Returns: int</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyflann.FLANN.used_memory_dataset">
-<code class="sig-name descname">used_memory_dataset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.used_memory_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANN.used_memory_dataset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the amount of memory used by the dataset</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py exception">
-<dt id="pyflann.FLANNException">
-<em class="property">exception </em><code class="sig-prename descclassname">pyflann.</code><code class="sig-name descname">FLANNException</code><a class="reference internal" href="_modules/pyflann/exceptions.html#FLANNException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANNException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-</dd></dl>
-
-<dl class="py class">
-<dt id="pyflann.FLANNParameters">
-<em class="property">class </em><code class="sig-prename descclassname">pyflann.</code><code class="sig-name descname">FLANNParameters</code><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#FLANNParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FLANNParameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pyflann.flann_ctypes.CustomStructure" title="pyflann.flann_ctypes.CustomStructure"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyflann.flann_ctypes.CustomStructure</span></code></a></p>
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.algorithm">
-<code class="sig-name descname">algorithm</code><a class="headerlink" href="#pyflann.FLANNParameters.algorithm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.branching">
-<code class="sig-name descname">branching</code><a class="headerlink" href="#pyflann.FLANNParameters.branching" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.build_weight">
-<code class="sig-name descname">build_weight</code><a class="headerlink" href="#pyflann.FLANNParameters.build_weight" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.cb_index">
-<code class="sig-name descname">cb_index</code><a class="headerlink" href="#pyflann.FLANNParameters.cb_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.centers_init">
-<code class="sig-name descname">centers_init</code><a class="headerlink" href="#pyflann.FLANNParameters.centers_init" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.checks">
-<code class="sig-name descname">checks</code><a class="headerlink" href="#pyflann.FLANNParameters.checks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.cores">
-<code class="sig-name descname">cores</code><a class="headerlink" href="#pyflann.FLANNParameters.cores" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.eps">
-<code class="sig-name descname">eps</code><a class="headerlink" href="#pyflann.FLANNParameters.eps" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.iterations">
-<code class="sig-name descname">iterations</code><a class="headerlink" href="#pyflann.FLANNParameters.iterations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.key_size_">
-<code class="sig-name descname">key_size_</code><a class="headerlink" href="#pyflann.FLANNParameters.key_size_" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.leaf_max_size">
-<code class="sig-name descname">leaf_max_size</code><a class="headerlink" href="#pyflann.FLANNParameters.leaf_max_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.log_level">
-<code class="sig-name descname">log_level</code><a class="headerlink" href="#pyflann.FLANNParameters.log_level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.max_neighbors">
-<code class="sig-name descname">max_neighbors</code><a class="headerlink" href="#pyflann.FLANNParameters.max_neighbors" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.memory_weight">
-<code class="sig-name descname">memory_weight</code><a class="headerlink" href="#pyflann.FLANNParameters.memory_weight" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.multi_probe_level_">
-<code class="sig-name descname">multi_probe_level_</code><a class="headerlink" href="#pyflann.FLANNParameters.multi_probe_level_" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.random_seed">
-<code class="sig-name descname">random_seed</code><a class="headerlink" href="#pyflann.FLANNParameters.random_seed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.sample_fraction">
-<code class="sig-name descname">sample_fraction</code><a class="headerlink" href="#pyflann.FLANNParameters.sample_fraction" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.sorted">
-<code class="sig-name descname">sorted</code><a class="headerlink" href="#pyflann.FLANNParameters.sorted" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.table_number_">
-<code class="sig-name descname">table_number_</code><a class="headerlink" href="#pyflann.FLANNParameters.table_number_" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.target_precision">
-<code class="sig-name descname">target_precision</code><a class="headerlink" href="#pyflann.FLANNParameters.target_precision" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANNParameters.trees">
-<code class="sig-name descname">trees</code><a class="headerlink" href="#pyflann.FLANNParameters.trees" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structure/Union member</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.FLANN_INDEX">
-<code class="sig-prename descclassname">pyflann.</code><code class="sig-name descname">FLANN_INDEX</code><a class="headerlink" href="#pyflann.FLANN_INDEX" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">ctypes.c_void_p</span></code></p>
-</dd></dl>
-
-<dl class="py class">
-<dt id="pyflann.FlannLib">
-<em class="property">class </em><code class="sig-prename descclassname">pyflann.</code><code class="sig-name descname">FlannLib</code><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#FlannLib"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.FlannLib" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.STRING">
-<code class="sig-prename descclassname">pyflann.</code><code class="sig-name descname">STRING</code><a class="headerlink" href="#pyflann.STRING" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">ctypes.c_char_p</span></code></p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="pyflann.define_functions">
-<code class="sig-prename descclassname">pyflann.</code><code class="sig-name descname">define_functions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fmtstr</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#define_functions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.define_functions" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt id="pyflann.ensure_2d_array">
-<code class="sig-prename descclassname">pyflann.</code><code class="sig-name descname">ensure_2d_array</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arr</span></em>, <em class="sig-param"><span class="n">flags</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#ensure_2d_array"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.ensure_2d_array" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="pyflann.index_type">
-<code class="sig-prename descclassname">pyflann.</code><code class="sig-name descname">index_type</code><a class="headerlink" href="#pyflann.index_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.int32</span></code></p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="pyflann.load_flann_library">
-<code class="sig-prename descclassname">pyflann.</code><code class="sig-name descname">load_flann_library</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#load_flann_library"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.load_flann_library" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>CommandLine:</dt><dd><p>python -c “import pyflann” –verbose</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="pyflann.set_distance_type">
-<code class="sig-prename descclassname">pyflann.</code><code class="sig-name descname">set_distance_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">distance_type</span></em>, <em class="sig-param"><span class="n">order</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#set_distance_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.set_distance_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the distance type used. Possible values: euclidean, manhattan, minkowski, max_dist,
-hik, hellinger, cs, kl.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="pyflann.to_bytes">
-<code class="sig-prename descclassname">pyflann.</code><code class="sig-name descname">to_bytes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">string</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#to_bytes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyflann.to_bytes" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</div>
-</div>
-
-
-          </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">wbia-pyflann</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">pyflann package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
@@ -818,50 +53,813 @@ hik, hellinger, cs, kl.</p>
 </li>
 </ul>
 
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Welcome to pyflann’s documentation!</a></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2020, Wild Me.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/pyflann.rst.txt"
-          rel="nofollow">Page source</a>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">wbia-pyflann</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>pyflann package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pyflann.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyflann-package">
+<h1>pyflann package<a class="headerlink" href="#pyflann-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-pyflann.__main__">
+<span id="pyflann-main-module"></span><h2>pyflann.__main__ module<a class="headerlink" href="#module-pyflann.__main__" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyflann.__main__.main">
+<span class="sig-prename descclassname"><span class="pre">pyflann.__main__.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/__main__.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.__main__.main" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pyflann._version">
+<span id="pyflann-version-module"></span><h2>pyflann._version module<a class="headerlink" href="#module-pyflann._version" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-pyflann.exceptions">
+<span id="pyflann-exceptions-module"></span><h2>pyflann.exceptions module<a class="headerlink" href="#module-pyflann.exceptions" title="Permalink to this headline"></a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyflann.exceptions.FLANNException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyflann.exceptions.</span></span><span class="sig-name descname"><span class="pre">FLANNException</span></span><a class="reference internal" href="_modules/pyflann/exceptions.html#FLANNException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.exceptions.FLANNException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+</dd></dl>
+
+</section>
+<section id="module-pyflann.flann_ctypes">
+<span id="pyflann-flann-ctypes-module"></span><h2>pyflann.flann_ctypes module<a class="headerlink" href="#module-pyflann.flann_ctypes" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.CustomStructure">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyflann.flann_ctypes.</span></span><span class="sig-name descname"><span class="pre">CustomStructure</span></span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#CustomStructure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.flann_ctypes.CustomStructure" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_ctypes.Structure</span></code></p>
+<p>This class extends the functionality of the ctype’s structure
+class by adding custom default values to the fields and a way of translating
+field types.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.CustomStructure.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#CustomStructure.keys"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.flann_ctypes.CustomStructure.keys" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.CustomStructure.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#CustomStructure.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.flann_ctypes.CustomStructure.update" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyflann.flann_ctypes.</span></span><span class="sig-name descname"><span class="pre">FLANNParameters</span></span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#FLANNParameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyflann.flann_ctypes.CustomStructure" title="pyflann.flann_ctypes.CustomStructure"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyflann.flann_ctypes.CustomStructure</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.algorithm">
+<span class="sig-name descname"><span class="pre">algorithm</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.algorithm" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.branching">
+<span class="sig-name descname"><span class="pre">branching</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.branching" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.build_weight">
+<span class="sig-name descname"><span class="pre">build_weight</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.build_weight" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.cb_index">
+<span class="sig-name descname"><span class="pre">cb_index</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.cb_index" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.centers_init">
+<span class="sig-name descname"><span class="pre">centers_init</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.centers_init" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.checks">
+<span class="sig-name descname"><span class="pre">checks</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.checks" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.cores">
+<span class="sig-name descname"><span class="pre">cores</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.cores" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.eps">
+<span class="sig-name descname"><span class="pre">eps</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.eps" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.iterations">
+<span class="sig-name descname"><span class="pre">iterations</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.iterations" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.key_size_">
+<span class="sig-name descname"><span class="pre">key_size_</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.key_size_" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.leaf_max_size">
+<span class="sig-name descname"><span class="pre">leaf_max_size</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.leaf_max_size" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.log_level">
+<span class="sig-name descname"><span class="pre">log_level</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.log_level" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.max_neighbors">
+<span class="sig-name descname"><span class="pre">max_neighbors</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.max_neighbors" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.memory_weight">
+<span class="sig-name descname"><span class="pre">memory_weight</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.memory_weight" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.multi_probe_level_">
+<span class="sig-name descname"><span class="pre">multi_probe_level_</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.multi_probe_level_" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.random_seed">
+<span class="sig-name descname"><span class="pre">random_seed</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.random_seed" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.sample_fraction">
+<span class="sig-name descname"><span class="pre">sample_fraction</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.sample_fraction" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.sorted">
+<span class="sig-name descname"><span class="pre">sorted</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.sorted" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.table_number_">
+<span class="sig-name descname"><span class="pre">table_number_</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.table_number_" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.target_precision">
+<span class="sig-name descname"><span class="pre">target_precision</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.target_precision" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FLANNParameters.trees">
+<span class="sig-name descname"><span class="pre">trees</span></span><a class="headerlink" href="#pyflann.flann_ctypes.FLANNParameters.trees" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.FlannLib">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyflann.flann_ctypes.</span></span><span class="sig-name descname"><span class="pre">FlannLib</span></span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#FlannLib"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.flann_ctypes.FlannLib" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.define_functions">
+<span class="sig-prename descclassname"><span class="pre">pyflann.flann_ctypes.</span></span><span class="sig-name descname"><span class="pre">define_functions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmtstr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#define_functions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.flann_ctypes.define_functions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.ensure_2d_array">
+<span class="sig-prename descclassname"><span class="pre">pyflann.flann_ctypes.</span></span><span class="sig-name descname"><span class="pre">ensure_2d_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#ensure_2d_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.flann_ctypes.ensure_2d_array" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyflann.flann_ctypes.load_flann_library">
+<span class="sig-prename descclassname"><span class="pre">pyflann.flann_ctypes.</span></span><span class="sig-name descname"><span class="pre">load_flann_library</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#load_flann_library"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.flann_ctypes.load_flann_library" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>CommandLine:</dt><dd><p>python -c “import pyflann” –verbose</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pyflann.index">
+<span id="pyflann-index-module"></span><h2>pyflann.index module<a class="headerlink" href="#module-pyflann.index" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyflann.index.FLANN">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyflann.index.</span></span><span class="sig-name descname"><span class="pre">FLANN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>This class defines a python interface to the FLANN lirary.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyflann</span> <span class="kn">import</span> <span class="n">FLANN</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dvecs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">qvecs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">flann</span> <span class="o">=</span> <span class="n">FLANN</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">params</span> <span class="o">=</span> <span class="n">flann</span><span class="o">.</span><span class="n">build_index</span><span class="p">(</span><span class="n">dvecs</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.add_points">
+<span class="sig-name descname"><span class="pre">add_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rebuild_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.add_points"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.add_points" title="Permalink to this definition"></a></dt>
+<dd><p>Adds points to pre-built index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pts</strong> – 2D numpy array of points.</p></li>
+<li><p><strong>rebuild_threshold</strong> – reallocs index when it grows by factor of
+<cite>rebuild_threshold</cite>. A smaller value results is more space
+efficient but less computationally efficient. Must be greater
+than 1.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.build_index">
+<span class="sig-name descname"><span class="pre">build_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.build_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.build_index" title="Permalink to this definition"></a></dt>
+<dd><p>This builds and internally stores an index to be used for
+future nearest neighbor matchings.  It erases any previously
+stored indexes, so use multiple instances of this class to
+work with multiple stored indices.  Use nn_index(…) to find
+the nearest neighbors in this index.</p>
+<p>pts is a 2d numpy array or matrix. All the computation is done
+in np.float32 type, but pts may be any type that is convertable
+to np.float32.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.delete_index">
+<span class="sig-name descname"><span class="pre">delete_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.delete_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.delete_index" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes the current index freeing all the momory it uses.
+The memory used by the dataset that was indexed is not freed
+unless there are no other references to those numpy arrays.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.get_indexed_data">
+<span class="sig-name descname"><span class="pre">get_indexed_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.get_indexed_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.get_indexed_data" title="Permalink to this definition"></a></dt>
+<dd><p>returns all the data indexed by the FLANN object</p>
+<p>(this returns points that have been removed but still exist in memory)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.get_indexed_shape">
+<span class="sig-name descname"><span class="pre">get_indexed_shape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.get_indexed_shape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.get_indexed_shape" title="Permalink to this definition"></a></dt>
+<dd><p>returns the shape of the data being indexed</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.hierarchical_kmeans">
+<span class="sig-name descname"><span class="pre">hierarchical_kmeans</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">branch_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_branches</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.hierarchical_kmeans"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.hierarchical_kmeans" title="Permalink to this definition"></a></dt>
+<dd><p>Clusters the data by using multiple runs of kmeans to
+recursively partition the dataset.  The number of resulting
+clusters is given by (branch_size-1)*num_branches+1.</p>
+<p>This method can be significantly faster when the number of
+desired clusters is quite large (e.g. a hundred or more).
+Higher branch sizes are slower but may give better results.</p>
+<p>If dtype is None (the default), the array returned is the same
+type as pts.  Otherwise, the returned array is of type dtype.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.kmeans">
+<span class="sig-name descname"><span class="pre">kmeans</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.kmeans"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.kmeans" title="Permalink to this definition"></a></dt>
+<dd><p>Runs kmeans on pts with num_clusters centroids.  Returns a
+numpy array of size num_clusters x dim.</p>
+<p>If max_iterations is not None, the algorithm terminates after
+the given number of iterations regardless of convergence.  The
+default is to run until convergence.</p>
+<p>If dtype is None (the default), the array returned is the same
+type as pts.  Otherwise, the returned array is of type dtype.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.load_index">
+<span class="sig-name descname"><span class="pre">load_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.load_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.load_index" title="Permalink to this definition"></a></dt>
+<dd><p>Loads an index previously saved to disk.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.nn">
+<span class="sig-name descname"><span class="pre">nn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qpts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_neighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.nn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.nn" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the num_neighbors nearest points in dataset for each point
+in testset.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.nn_index">
+<span class="sig-name descname"><span class="pre">nn_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qpts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_neighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.nn_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.nn_index" title="Permalink to this definition"></a></dt>
+<dd><p>For each point in querypts, (which may be a single point), it
+returns the num_neighbors nearest points in the index built by
+calling build_index.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.nn_radius">
+<span class="sig-name descname"><span class="pre">nn_radius</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.nn_radius"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.nn_radius" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.remove_point">
+<span class="sig-name descname"><span class="pre">remove_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.remove_point"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.remove_point" title="Permalink to this definition"></a></dt>
+<dd><p>Removes a point from a pre-built index.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.remove_points">
+<span class="sig-name descname"><span class="pre">remove_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_list</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.remove_points"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.remove_points" title="Permalink to this definition"></a></dt>
+<dd><p>Removes multiple points from the index</p>
+<dl class="simple">
+<dt>Params:</dt><dd><p>id_list = point ids to be removed</p>
+</dd>
+</dl>
+<p>Returns: void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.save_index">
+<span class="sig-name descname"><span class="pre">save_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.save_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.save_index" title="Permalink to this definition"></a></dt>
+<dd><p>This saves the index to a disk file.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.shape">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shape</span></span><a class="headerlink" href="#pyflann.index.FLANN.shape" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.used_memory">
+<span class="sig-name descname"><span class="pre">used_memory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.used_memory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.used_memory" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the amount of memory used by the index</p>
+<p>Returns: int</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.index.FLANN.used_memory_dataset">
+<span class="sig-name descname"><span class="pre">used_memory_dataset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.used_memory_dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.FLANN.used_memory_dataset" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the amount of memory used by the dataset</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyflann.index.set_distance_type">
+<span class="sig-prename descclassname"><span class="pre">pyflann.index.</span></span><span class="sig-name descname"><span class="pre">set_distance_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distance_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#set_distance_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.set_distance_type" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the distance type used. Possible values: euclidean, manhattan, minkowski, max_dist,
+hik, hellinger, cs, kl.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyflann.index.to_bytes">
+<span class="sig-prename descclassname"><span class="pre">pyflann.index.</span></span><span class="sig-name descname"><span class="pre">to_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#to_bytes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.index.to_bytes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pyflann">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyflann" title="Permalink to this headline"></a></h2>
+<p>mkinit pyflann</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyflann.CustomStructure">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyflann.</span></span><span class="sig-name descname"><span class="pre">CustomStructure</span></span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#CustomStructure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.CustomStructure" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_ctypes.Structure</span></code></p>
+<p>This class extends the functionality of the ctype’s structure
+class by adding custom default values to the fields and a way of translating
+field types.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.CustomStructure.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#CustomStructure.keys"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.CustomStructure.keys" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.CustomStructure.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#CustomStructure.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.CustomStructure.update" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyflann.FLANN">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyflann.</span></span><span class="sig-name descname"><span class="pre">FLANN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>This class defines a python interface to the FLANN lirary.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyflann</span> <span class="kn">import</span> <span class="n">FLANN</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dvecs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">qvecs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">flann</span> <span class="o">=</span> <span class="n">FLANN</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">params</span> <span class="o">=</span> <span class="n">flann</span><span class="o">.</span><span class="n">build_index</span><span class="p">(</span><span class="n">dvecs</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.add_points">
+<span class="sig-name descname"><span class="pre">add_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rebuild_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.add_points"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.add_points" title="Permalink to this definition"></a></dt>
+<dd><p>Adds points to pre-built index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pts</strong> – 2D numpy array of points.</p></li>
+<li><p><strong>rebuild_threshold</strong> – reallocs index when it grows by factor of
+<cite>rebuild_threshold</cite>. A smaller value results is more space
+efficient but less computationally efficient. Must be greater
+than 1.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.build_index">
+<span class="sig-name descname"><span class="pre">build_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.build_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.build_index" title="Permalink to this definition"></a></dt>
+<dd><p>This builds and internally stores an index to be used for
+future nearest neighbor matchings.  It erases any previously
+stored indexes, so use multiple instances of this class to
+work with multiple stored indices.  Use nn_index(…) to find
+the nearest neighbors in this index.</p>
+<p>pts is a 2d numpy array or matrix. All the computation is done
+in np.float32 type, but pts may be any type that is convertable
+to np.float32.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.delete_index">
+<span class="sig-name descname"><span class="pre">delete_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.delete_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.delete_index" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes the current index freeing all the momory it uses.
+The memory used by the dataset that was indexed is not freed
+unless there are no other references to those numpy arrays.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.get_indexed_data">
+<span class="sig-name descname"><span class="pre">get_indexed_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.get_indexed_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.get_indexed_data" title="Permalink to this definition"></a></dt>
+<dd><p>returns all the data indexed by the FLANN object</p>
+<p>(this returns points that have been removed but still exist in memory)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.get_indexed_shape">
+<span class="sig-name descname"><span class="pre">get_indexed_shape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.get_indexed_shape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.get_indexed_shape" title="Permalink to this definition"></a></dt>
+<dd><p>returns the shape of the data being indexed</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.hierarchical_kmeans">
+<span class="sig-name descname"><span class="pre">hierarchical_kmeans</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">branch_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_branches</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.hierarchical_kmeans"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.hierarchical_kmeans" title="Permalink to this definition"></a></dt>
+<dd><p>Clusters the data by using multiple runs of kmeans to
+recursively partition the dataset.  The number of resulting
+clusters is given by (branch_size-1)*num_branches+1.</p>
+<p>This method can be significantly faster when the number of
+desired clusters is quite large (e.g. a hundred or more).
+Higher branch sizes are slower but may give better results.</p>
+<p>If dtype is None (the default), the array returned is the same
+type as pts.  Otherwise, the returned array is of type dtype.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.kmeans">
+<span class="sig-name descname"><span class="pre">kmeans</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.kmeans"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.kmeans" title="Permalink to this definition"></a></dt>
+<dd><p>Runs kmeans on pts with num_clusters centroids.  Returns a
+numpy array of size num_clusters x dim.</p>
+<p>If max_iterations is not None, the algorithm terminates after
+the given number of iterations regardless of convergence.  The
+default is to run until convergence.</p>
+<p>If dtype is None (the default), the array returned is the same
+type as pts.  Otherwise, the returned array is of type dtype.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.load_index">
+<span class="sig-name descname"><span class="pre">load_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.load_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.load_index" title="Permalink to this definition"></a></dt>
+<dd><p>Loads an index previously saved to disk.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.nn">
+<span class="sig-name descname"><span class="pre">nn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qpts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_neighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.nn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.nn" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the num_neighbors nearest points in dataset for each point
+in testset.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.nn_index">
+<span class="sig-name descname"><span class="pre">nn_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qpts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_neighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.nn_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.nn_index" title="Permalink to this definition"></a></dt>
+<dd><p>For each point in querypts, (which may be a single point), it
+returns the num_neighbors nearest points in the index built by
+calling build_index.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.nn_radius">
+<span class="sig-name descname"><span class="pre">nn_radius</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.nn_radius"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.nn_radius" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.remove_point">
+<span class="sig-name descname"><span class="pre">remove_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.remove_point"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.remove_point" title="Permalink to this definition"></a></dt>
+<dd><p>Removes a point from a pre-built index.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.remove_points">
+<span class="sig-name descname"><span class="pre">remove_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_list</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.remove_points"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.remove_points" title="Permalink to this definition"></a></dt>
+<dd><p>Removes multiple points from the index</p>
+<dl class="simple">
+<dt>Params:</dt><dd><p>id_list = point ids to be removed</p>
+</dd>
+</dl>
+<p>Returns: void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.save_index">
+<span class="sig-name descname"><span class="pre">save_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.save_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.save_index" title="Permalink to this definition"></a></dt>
+<dd><p>This saves the index to a disk file.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyflann.FLANN.shape">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shape</span></span><a class="headerlink" href="#pyflann.FLANN.shape" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.used_memory">
+<span class="sig-name descname"><span class="pre">used_memory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.used_memory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.used_memory" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the amount of memory used by the index</p>
+<p>Returns: int</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyflann.FLANN.used_memory_dataset">
+<span class="sig-name descname"><span class="pre">used_memory_dataset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#FLANN.used_memory_dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANN.used_memory_dataset" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the amount of memory used by the dataset</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyflann.FLANNException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyflann.</span></span><span class="sig-name descname"><span class="pre">FLANNException</span></span><a class="reference internal" href="_modules/pyflann/exceptions.html#FLANNException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANNException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyflann.</span></span><span class="sig-name descname"><span class="pre">FLANNParameters</span></span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#FLANNParameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FLANNParameters" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyflann.flann_ctypes.CustomStructure" title="pyflann.flann_ctypes.CustomStructure"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyflann.flann_ctypes.CustomStructure</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.algorithm">
+<span class="sig-name descname"><span class="pre">algorithm</span></span><a class="headerlink" href="#pyflann.FLANNParameters.algorithm" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.branching">
+<span class="sig-name descname"><span class="pre">branching</span></span><a class="headerlink" href="#pyflann.FLANNParameters.branching" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.build_weight">
+<span class="sig-name descname"><span class="pre">build_weight</span></span><a class="headerlink" href="#pyflann.FLANNParameters.build_weight" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.cb_index">
+<span class="sig-name descname"><span class="pre">cb_index</span></span><a class="headerlink" href="#pyflann.FLANNParameters.cb_index" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.centers_init">
+<span class="sig-name descname"><span class="pre">centers_init</span></span><a class="headerlink" href="#pyflann.FLANNParameters.centers_init" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.checks">
+<span class="sig-name descname"><span class="pre">checks</span></span><a class="headerlink" href="#pyflann.FLANNParameters.checks" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.cores">
+<span class="sig-name descname"><span class="pre">cores</span></span><a class="headerlink" href="#pyflann.FLANNParameters.cores" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.eps">
+<span class="sig-name descname"><span class="pre">eps</span></span><a class="headerlink" href="#pyflann.FLANNParameters.eps" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.iterations">
+<span class="sig-name descname"><span class="pre">iterations</span></span><a class="headerlink" href="#pyflann.FLANNParameters.iterations" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.key_size_">
+<span class="sig-name descname"><span class="pre">key_size_</span></span><a class="headerlink" href="#pyflann.FLANNParameters.key_size_" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.leaf_max_size">
+<span class="sig-name descname"><span class="pre">leaf_max_size</span></span><a class="headerlink" href="#pyflann.FLANNParameters.leaf_max_size" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.log_level">
+<span class="sig-name descname"><span class="pre">log_level</span></span><a class="headerlink" href="#pyflann.FLANNParameters.log_level" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.max_neighbors">
+<span class="sig-name descname"><span class="pre">max_neighbors</span></span><a class="headerlink" href="#pyflann.FLANNParameters.max_neighbors" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.memory_weight">
+<span class="sig-name descname"><span class="pre">memory_weight</span></span><a class="headerlink" href="#pyflann.FLANNParameters.memory_weight" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.multi_probe_level_">
+<span class="sig-name descname"><span class="pre">multi_probe_level_</span></span><a class="headerlink" href="#pyflann.FLANNParameters.multi_probe_level_" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.random_seed">
+<span class="sig-name descname"><span class="pre">random_seed</span></span><a class="headerlink" href="#pyflann.FLANNParameters.random_seed" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.sample_fraction">
+<span class="sig-name descname"><span class="pre">sample_fraction</span></span><a class="headerlink" href="#pyflann.FLANNParameters.sample_fraction" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.sorted">
+<span class="sig-name descname"><span class="pre">sorted</span></span><a class="headerlink" href="#pyflann.FLANNParameters.sorted" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.table_number_">
+<span class="sig-name descname"><span class="pre">table_number_</span></span><a class="headerlink" href="#pyflann.FLANNParameters.table_number_" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.target_precision">
+<span class="sig-name descname"><span class="pre">target_precision</span></span><a class="headerlink" href="#pyflann.FLANNParameters.target_precision" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANNParameters.trees">
+<span class="sig-name descname"><span class="pre">trees</span></span><a class="headerlink" href="#pyflann.FLANNParameters.trees" title="Permalink to this definition"></a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.FLANN_INDEX">
+<span class="sig-prename descclassname"><span class="pre">pyflann.</span></span><span class="sig-name descname"><span class="pre">FLANN_INDEX</span></span><a class="headerlink" href="#pyflann.FLANN_INDEX" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.c_void_p" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ctypes.c_void_p</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyflann.FlannLib">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyflann.</span></span><span class="sig-name descname"><span class="pre">FlannLib</span></span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#FlannLib"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.FlannLib" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.STRING">
+<span class="sig-prename descclassname"><span class="pre">pyflann.</span></span><span class="sig-name descname"><span class="pre">STRING</span></span><a class="headerlink" href="#pyflann.STRING" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.c_char_p" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ctypes.c_char_p</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyflann.define_functions">
+<span class="sig-prename descclassname"><span class="pre">pyflann.</span></span><span class="sig-name descname"><span class="pre">define_functions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmtstr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#define_functions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.define_functions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyflann.ensure_2d_array">
+<span class="sig-prename descclassname"><span class="pre">pyflann.</span></span><span class="sig-name descname"><span class="pre">ensure_2d_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#ensure_2d_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.ensure_2d_array" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyflann.index_type">
+<span class="sig-prename descclassname"><span class="pre">pyflann.</span></span><span class="sig-name descname"><span class="pre">index_type</span></span><a class="headerlink" href="#pyflann.index_type" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.int32</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyflann.load_flann_library">
+<span class="sig-prename descclassname"><span class="pre">pyflann.</span></span><span class="sig-name descname"><span class="pre">load_flann_library</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/flann_ctypes.html#load_flann_library"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.load_flann_library" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>CommandLine:</dt><dd><p>python -c “import pyflann” –verbose</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyflann.set_distance_type">
+<span class="sig-prename descclassname"><span class="pre">pyflann.</span></span><span class="sig-name descname"><span class="pre">set_distance_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distance_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#set_distance_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.set_distance_type" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the distance type used. Possible values: euclidean, manhattan, minkowski, max_dist,
+hik, hellinger, cs, kl.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyflann.to_bytes">
+<span class="sig-prename descclassname"><span class="pre">pyflann.</span></span><span class="sig-name descname"><span class="pre">to_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyflann/index.html#to_bytes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyflann.to_bytes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to pyflann’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
-    
+  <hr/>
 
-    
-  </body>
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Wild Me.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

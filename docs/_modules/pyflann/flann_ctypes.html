@@ -1,36 +1,71 @@
-
 <!DOCTYPE html>
-
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pyflann.flann_ctypes &#8212; wbia-pyflann 3.1.0 documentation</title>
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyflann.flann_ctypes &mdash; wbia-pyflann 4.0.5.dev1+dirty documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-   
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
 
-  </head><body>
-  
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> wbia-pyflann
+          </a>
+              <div class="version">
+                4.0.5.dev1+dirty
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pyflann.html">pyflann package</a></li>
+</ul>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          
+        </div>
+      </div>
+    </nav>
 
-          <div class="body" role="main">
-            
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">wbia-pyflann</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      <li>pyflann.flann_ctypes</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
   <h1>Source code for pyflann.flann_ctypes</h1><div class="highlight"><pre>
 <span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="c1"># Copyright 2008-2009  Marius Muja (mariusm@cs.ubc.ca). All rights reserved.</span>
@@ -84,9 +119,9 @@
 
 <div class="viewcode-block" id="CustomStructure"><a class="viewcode-back" href="../../pyflann.html#pyflann.flann_ctypes.CustomStructure">[docs]</a><span class="k">class</span> <span class="nc">CustomStructure</span><span class="p">(</span><span class="n">Structure</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        This class extends the functionality of the ctype&#39;s structure</span>
-<span class="sd">        class by adding custom default values to the fields and a way of translating</span>
-<span class="sd">        field types.</span>
+<span class="sd">    This class extends the functionality of the ctype&#39;s structure</span>
+<span class="sd">    class by adding custom default values to the fields and a way of translating</span>
+<span class="sd">    field types.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_defaults_</span> <span class="o">=</span> <span class="p">{}</span>
@@ -333,7 +368,9 @@
                 <span class="n">flannlib</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">if</span> <span class="n">flannlib</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="s1">&#39;Cannot load FLANN library. Did you compile FLANN?&#39;</span><span class="p">)</span>
+        <span class="kn">import</span> <span class="nn">warnings</span>
+
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Unable to load C library for FLANN&#39;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">verbose</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;[flann] Using </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">flannlib</span><span class="p">,))</span>
     <span class="k">return</span> <span class="n">flannlib</span></div>
@@ -348,16 +385,6 @@
 
 <span class="n">flann</span> <span class="o">=</span> <span class="n">FlannLib</span><span class="p">()</span>
 
-
-<span class="n">flannlib</span><span class="o">.</span><span class="n">flann_log_verbosity</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="n">flannlib</span><span class="o">.</span><span class="n">flann_log_verbosity</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span><span class="n">c_int</span><span class="p">]</span>  <span class="c1"># level</span>
-
-
-<span class="n">flannlib</span><span class="o">.</span><span class="n">flann_set_distance_type</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="n">flannlib</span><span class="o">.</span><span class="n">flann_set_distance_type</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">c_int</span><span class="p">,</span>
-    <span class="n">c_int</span><span class="p">,</span>
-<span class="p">]</span>
 
 <span class="n">type_mappings</span> <span class="o">=</span> <span class="p">(</span>
     <span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">,</span> <span class="s1">&#39;float32&#39;</span><span class="p">),</span>
@@ -384,36 +411,47 @@
         <span class="k">raise</span></div>
 
 
-<span class="n">flann</span><span class="o">.</span><span class="n">build_index</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">define_functions</span><span class="p">(</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="k">if</span> <span class="n">flannlib</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_log_verbosity</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_log_verbosity</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span><span class="n">c_int</span><span class="p">]</span>  <span class="c1"># level</span>
+
+
+    <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_set_distance_type</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_set_distance_type</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">c_int</span><span class="p">,</span>
+        <span class="n">c_int</span><span class="p">,</span>
+    <span class="p">]</span>
+
+    <span class="n">flann</span><span class="o">.</span><span class="n">build_index</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">define_functions</span><span class="p">(</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">flannlib.flann_build_index_%(C)s.restype = FLANN_INDEX</span>
 <span class="sd">flannlib.flann_build_index_%(C)s.argtypes = [</span>
-<span class="sd">        ndpointer(%(numpy)s, ndim=2, flags=&#39;aligned, c_contiguous&#39;),  # dataset</span>
-<span class="sd">        c_int,  # rows</span>
-<span class="sd">        c_int,  # cols</span>
-<span class="sd">        POINTER(c_float),  # speedup</span>
-<span class="sd">        POINTER(FLANNParameters)  # flann_params</span>
+<span class="sd">    ndpointer(%(numpy)s, ndim=2, flags=&#39;aligned, c_contiguous&#39;),  # dataset</span>
+<span class="sd">    c_int,  # rows</span>
+<span class="sd">    c_int,  # cols</span>
+<span class="sd">    POINTER(c_float),  # speedup</span>
+<span class="sd">    POINTER(FLANNParameters)  # flann_params</span>
 <span class="sd">]</span>
 <span class="sd">flann.build_index[%(numpy)s] = flannlib.flann_build_index_%(C)s</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="p">)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="p">)</span>
 
-<span class="n">flann</span><span class="o">.</span><span class="n">used_memory</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">define_functions</span><span class="p">(</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="n">flann</span><span class="o">.</span><span class="n">used_memory</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">define_functions</span><span class="p">(</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">flannlib.flann_used_memory_%(C)s.restype = c_int</span>
 <span class="sd">flannlib.flann_used_memory_%(C)s.argtypes = [</span>
 <span class="sd">        FLANN_INDEX,  # index_ptr</span>
 <span class="sd">]</span>
 <span class="sd">flann.used_memory[%(numpy)s] = flannlib.flann_used_memory_%(C)s</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="p">)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="p">)</span>
 
 
-<span class="n">flann</span><span class="o">.</span><span class="n">add_points</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">define_functions</span><span class="p">(</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="n">flann</span><span class="o">.</span><span class="n">add_points</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">define_functions</span><span class="p">(</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">flannlib.flann_add_points_%(C)s.restype = None</span>
 <span class="sd">flannlib.flann_add_points_%(C)s.argtypes = [</span>
 <span class="sd">        FLANN_INDEX, # index_id</span>
@@ -422,38 +460,38 @@
 <span class="sd">        c_int, # rebuild_threshhold</span>
 <span class="sd">]</span>
 <span class="sd">flann.add_points[%(numpy)s] = flannlib.flann_add_points_%(C)s</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="p">)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="p">)</span>
 
 
-<span class="n">flann</span><span class="o">.</span><span class="n">remove_point</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">define_functions</span><span class="p">(</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="n">flann</span><span class="o">.</span><span class="n">remove_point</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">define_functions</span><span class="p">(</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">flannlib.flann_remove_point_%(C)s.restype = None</span>
 <span class="sd">flannlib.flann_remove_point_%(C)s.argtypes = [</span>
 <span class="sd">        FLANN_INDEX,  # index_ptr</span>
 <span class="sd">        c_int,  # id_</span>
 <span class="sd">]</span>
 <span class="sd">flann.remove_point[%(numpy)s] = flannlib.flann_remove_point_%(C)s</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="p">)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="p">)</span>
 
 
-<span class="n">flann</span><span class="o">.</span><span class="n">save_index</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">define_functions</span><span class="p">(</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="n">flann</span><span class="o">.</span><span class="n">save_index</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">define_functions</span><span class="p">(</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">flannlib.flann_save_index_%(C)s.restype = None</span>
 <span class="sd">flannlib.flann_save_index_%(C)s.argtypes = [</span>
 <span class="sd">        FLANN_INDEX,  # index_id</span>
 <span class="sd">        c_char_p #filename</span>
 <span class="sd">]</span>
 <span class="sd">flann.save_index[%(numpy)s] = flannlib.flann_save_index_%(C)s</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="p">)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="p">)</span>
 
-<span class="n">flann</span><span class="o">.</span><span class="n">load_index</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">define_functions</span><span class="p">(</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="n">flann</span><span class="o">.</span><span class="n">load_index</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">define_functions</span><span class="p">(</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">flannlib.flann_load_index_%(C)s.restype = FLANN_INDEX</span>
 <span class="sd">flannlib.flann_load_index_%(C)s.argtypes = [</span>
 <span class="sd">        c_char_p,  #filename</span>
@@ -462,12 +500,12 @@
 <span class="sd">        c_int,  # cols</span>
 <span class="sd">]</span>
 <span class="sd">flann.load_index[%(numpy)s] = flannlib.flann_load_index_%(C)s</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="p">)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="p">)</span>
 
-<span class="n">flann</span><span class="o">.</span><span class="n">find_nearest_neighbors</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">define_functions</span><span class="p">(</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="n">flann</span><span class="o">.</span><span class="n">find_nearest_neighbors</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">define_functions</span><span class="p">(</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">flannlib.flann_find_nearest_neighbors_%(C)s.restype = c_int</span>
 <span class="sd">flannlib.flann_find_nearest_neighbors_%(C)s.argtypes = [</span>
 <span class="sd">        ndpointer(%(numpy)s, ndim=2, flags=&#39;aligned, c_contiguous&#39;),  # dataset</span>
@@ -481,29 +519,29 @@
 <span class="sd">        POINTER(FLANNParameters)  # flann_params</span>
 <span class="sd">]</span>
 <span class="sd">flann.find_nearest_neighbors[%(numpy)s] = flannlib.flann_find_nearest_neighbors_%(C)s</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="p">)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="p">)</span>
 
-<span class="c1"># fix definition for the &#39;double&#39; case</span>
+    <span class="c1"># fix definition for the &#39;double&#39; case</span>
 
-<span class="n">flannlib</span><span class="o">.</span><span class="n">flann_find_nearest_neighbors_double</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="n">c_int</span>
-<span class="n">flannlib</span><span class="o">.</span><span class="n">flann_find_nearest_neighbors_double</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous&#39;</span><span class="p">),</span>  <span class="c1"># dataset</span>
-    <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># rows</span>
-    <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># cols</span>
-    <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous&#39;</span><span class="p">),</span>  <span class="c1"># testset</span>
-    <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># tcount</span>
-    <span class="n">ndpointer</span><span class="p">(</span><span class="n">int32</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous, writeable&#39;</span><span class="p">),</span>  <span class="c1"># result</span>
-    <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous, writeable&#39;</span><span class="p">),</span>  <span class="c1"># dists</span>
-    <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># nn</span>
-    <span class="n">POINTER</span><span class="p">(</span><span class="n">FLANNParameters</span><span class="p">),</span>  <span class="c1"># flann_params</span>
-<span class="p">]</span>
-<span class="n">flann</span><span class="o">.</span><span class="n">find_nearest_neighbors</span><span class="p">[</span><span class="n">float64</span><span class="p">]</span> <span class="o">=</span> <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_find_nearest_neighbors_double</span>
+    <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_find_nearest_neighbors_double</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="n">c_int</span>
+    <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_find_nearest_neighbors_double</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous&#39;</span><span class="p">),</span>  <span class="c1"># dataset</span>
+        <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># rows</span>
+        <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># cols</span>
+        <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous&#39;</span><span class="p">),</span>  <span class="c1"># testset</span>
+        <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># tcount</span>
+        <span class="n">ndpointer</span><span class="p">(</span><span class="n">int32</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous, writeable&#39;</span><span class="p">),</span>  <span class="c1"># result</span>
+        <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous, writeable&#39;</span><span class="p">),</span>  <span class="c1"># dists</span>
+        <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># nn</span>
+        <span class="n">POINTER</span><span class="p">(</span><span class="n">FLANNParameters</span><span class="p">),</span>  <span class="c1"># flann_params</span>
+    <span class="p">]</span>
+    <span class="n">flann</span><span class="o">.</span><span class="n">find_nearest_neighbors</span><span class="p">[</span><span class="n">float64</span><span class="p">]</span> <span class="o">=</span> <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_find_nearest_neighbors_double</span>
 
 
-<span class="n">flann</span><span class="o">.</span><span class="n">find_nearest_neighbors_index</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">define_functions</span><span class="p">(</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="n">flann</span><span class="o">.</span><span class="n">find_nearest_neighbors_index</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">define_functions</span><span class="p">(</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">flannlib.flann_find_nearest_neighbors_index_%(C)s.restype = c_int</span>
 <span class="sd">flannlib.flann_find_nearest_neighbors_index_%(C)s.argtypes = [</span>
 <span class="sd">        FLANN_INDEX,  # index_id</span>
@@ -515,26 +553,26 @@
 <span class="sd">        POINTER(FLANNParameters) # flann_params</span>
 <span class="sd">]</span>
 <span class="sd">flann.find_nearest_neighbors_index[%(numpy)s] = flannlib.flann_find_nearest_neighbors_index_%(C)s</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="p">)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="p">)</span>
 
-<span class="n">flannlib</span><span class="o">.</span><span class="n">flann_find_nearest_neighbors_index_double</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="n">c_int</span>
-<span class="n">flannlib</span><span class="o">.</span><span class="n">flann_find_nearest_neighbors_index_double</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">FLANN_INDEX</span><span class="p">,</span>  <span class="c1"># index_id</span>
-    <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous&#39;</span><span class="p">),</span>  <span class="c1"># testset</span>
-    <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># tcount</span>
-    <span class="n">ndpointer</span><span class="p">(</span><span class="n">int32</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous, writeable&#39;</span><span class="p">),</span>  <span class="c1"># result</span>
-    <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous, writeable&#39;</span><span class="p">),</span>  <span class="c1"># dists</span>
-    <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># nn</span>
-    <span class="n">POINTER</span><span class="p">(</span><span class="n">FLANNParameters</span><span class="p">),</span>  <span class="c1"># flann_params</span>
-<span class="p">]</span>
-<span class="n">flann</span><span class="o">.</span><span class="n">find_nearest_neighbors_index</span><span class="p">[</span>
-    <span class="n">float64</span>
-<span class="p">]</span> <span class="o">=</span> <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_find_nearest_neighbors_index_double</span>
+    <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_find_nearest_neighbors_index_double</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="n">c_int</span>
+    <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_find_nearest_neighbors_index_double</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">FLANN_INDEX</span><span class="p">,</span>  <span class="c1"># index_id</span>
+        <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous&#39;</span><span class="p">),</span>  <span class="c1"># testset</span>
+        <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># tcount</span>
+        <span class="n">ndpointer</span><span class="p">(</span><span class="n">int32</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous, writeable&#39;</span><span class="p">),</span>  <span class="c1"># result</span>
+        <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous, writeable&#39;</span><span class="p">),</span>  <span class="c1"># dists</span>
+        <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># nn</span>
+        <span class="n">POINTER</span><span class="p">(</span><span class="n">FLANNParameters</span><span class="p">),</span>  <span class="c1"># flann_params</span>
+    <span class="p">]</span>
+    <span class="n">flann</span><span class="o">.</span><span class="n">find_nearest_neighbors_index</span><span class="p">[</span>
+        <span class="n">float64</span>
+    <span class="p">]</span> <span class="o">=</span> <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_find_nearest_neighbors_index_double</span>
 
-<span class="n">flann</span><span class="o">.</span><span class="n">radius_search</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">define_functions</span><span class="p">(</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="n">flann</span><span class="o">.</span><span class="n">radius_search</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">define_functions</span><span class="p">(</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">flannlib.flann_radius_search_%(C)s.restype = c_int</span>
 <span class="sd">flannlib.flann_radius_search_%(C)s.argtypes = [</span>
 <span class="sd">        FLANN_INDEX,  # index_id</span>
@@ -546,25 +584,25 @@
 <span class="sd">        POINTER(FLANNParameters) # flann_params</span>
 <span class="sd">]</span>
 <span class="sd">flann.radius_search[%(numpy)s] = flannlib.flann_radius_search_%(C)s</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="p">)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="p">)</span>
 
-<span class="n">flannlib</span><span class="o">.</span><span class="n">flann_radius_search_double</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="n">c_int</span>
-<span class="n">flannlib</span><span class="o">.</span><span class="n">flann_radius_search_double</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">FLANN_INDEX</span><span class="p">,</span>  <span class="c1"># index_id</span>
-    <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous&#39;</span><span class="p">),</span>  <span class="c1"># query</span>
-    <span class="n">ndpointer</span><span class="p">(</span><span class="n">int32</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous, writeable&#39;</span><span class="p">),</span>  <span class="c1"># indices</span>
-    <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous, writeable&#39;</span><span class="p">),</span>  <span class="c1"># dists</span>
-    <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># max_nn</span>
-    <span class="n">c_float</span><span class="p">,</span>  <span class="c1"># radius</span>
-    <span class="n">POINTER</span><span class="p">(</span><span class="n">FLANNParameters</span><span class="p">),</span>  <span class="c1"># flann_params</span>
-<span class="p">]</span>
-<span class="n">flann</span><span class="o">.</span><span class="n">radius_search</span><span class="p">[</span><span class="n">float64</span><span class="p">]</span> <span class="o">=</span> <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_radius_search_double</span>
+    <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_radius_search_double</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="n">c_int</span>
+    <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_radius_search_double</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">FLANN_INDEX</span><span class="p">,</span>  <span class="c1"># index_id</span>
+        <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous&#39;</span><span class="p">),</span>  <span class="c1"># query</span>
+        <span class="n">ndpointer</span><span class="p">(</span><span class="n">int32</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous, writeable&#39;</span><span class="p">),</span>  <span class="c1"># indices</span>
+        <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous, writeable&#39;</span><span class="p">),</span>  <span class="c1"># dists</span>
+        <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># max_nn</span>
+        <span class="n">c_float</span><span class="p">,</span>  <span class="c1"># radius</span>
+        <span class="n">POINTER</span><span class="p">(</span><span class="n">FLANNParameters</span><span class="p">),</span>  <span class="c1"># flann_params</span>
+    <span class="p">]</span>
+    <span class="n">flann</span><span class="o">.</span><span class="n">radius_search</span><span class="p">[</span><span class="n">float64</span><span class="p">]</span> <span class="o">=</span> <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_radius_search_double</span>
 
 
-<span class="n">flann</span><span class="o">.</span><span class="n">compute_cluster_centers</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">define_functions</span><span class="p">(</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="n">flann</span><span class="o">.</span><span class="n">compute_cluster_centers</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">define_functions</span><span class="p">(</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">flannlib.flann_compute_cluster_centers_%(C)s.restype = c_int</span>
 <span class="sd">flannlib.flann_compute_cluster_centers_%(C)s.argtypes = [</span>
 <span class="sd">        ndpointer(%(numpy)s, ndim=2, flags=&#39;aligned, c_contiguous&#39;),  # dataset</span>
@@ -575,32 +613,32 @@
 <span class="sd">        POINTER(FLANNParameters)  # flann_params</span>
 <span class="sd">]</span>
 <span class="sd">flann.compute_cluster_centers[%(numpy)s] = flannlib.flann_compute_cluster_centers_%(C)s</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="p">)</span>
-<span class="c1"># double is an exception</span>
-<span class="n">flannlib</span><span class="o">.</span><span class="n">flann_compute_cluster_centers_double</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="n">c_int</span>
-<span class="n">flannlib</span><span class="o">.</span><span class="n">flann_compute_cluster_centers_double</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous&#39;</span><span class="p">),</span>  <span class="c1"># dataset</span>
-    <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># rows</span>
-    <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># cols</span>
-    <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># clusters</span>
-    <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous, writeable&#39;</span><span class="p">),</span>  <span class="c1"># result</span>
-    <span class="n">POINTER</span><span class="p">(</span><span class="n">FLANNParameters</span><span class="p">),</span>  <span class="c1"># flann_params</span>
-<span class="p">]</span>
-<span class="n">flann</span><span class="o">.</span><span class="n">compute_cluster_centers</span><span class="p">[</span><span class="n">float64</span><span class="p">]</span> <span class="o">=</span> <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_compute_cluster_centers_double</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="p">)</span>
+    <span class="c1"># double is an exception</span>
+    <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_compute_cluster_centers_double</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="n">c_int</span>
+    <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_compute_cluster_centers_double</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous&#39;</span><span class="p">),</span>  <span class="c1"># dataset</span>
+        <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># rows</span>
+        <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># cols</span>
+        <span class="n">c_int</span><span class="p">,</span>  <span class="c1"># clusters</span>
+        <span class="n">ndpointer</span><span class="p">(</span><span class="n">float64</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;aligned, c_contiguous, writeable&#39;</span><span class="p">),</span>  <span class="c1"># result</span>
+        <span class="n">POINTER</span><span class="p">(</span><span class="n">FLANNParameters</span><span class="p">),</span>  <span class="c1"># flann_params</span>
+    <span class="p">]</span>
+    <span class="n">flann</span><span class="o">.</span><span class="n">compute_cluster_centers</span><span class="p">[</span><span class="n">float64</span><span class="p">]</span> <span class="o">=</span> <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_compute_cluster_centers_double</span>
 
 
-<span class="n">flann</span><span class="o">.</span><span class="n">free_index</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">define_functions</span><span class="p">(</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="n">flann</span><span class="o">.</span><span class="n">free_index</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">define_functions</span><span class="p">(</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">flannlib.flann_free_index_%(C)s.restype = None</span>
 <span class="sd">flannlib.flann_free_index_%(C)s.argtypes = [</span>
 <span class="sd">        FLANN_INDEX,  # index_id</span>
 <span class="sd">        POINTER(FLANNParameters) # flann_params</span>
 <span class="sd">]</span>
 <span class="sd">flann.free_index[%(numpy)s] = flannlib.flann_free_index_%(C)s</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="p">)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="p">)</span>
 
 
 <div class="viewcode-block" id="ensure_2d_array"><a class="viewcode-back" href="../../pyflann.html#pyflann.flann_ctypes.ensure_2d_array">[docs]</a><span class="k">def</span> <span class="nf">ensure_2d_array</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -610,69 +648,31 @@
     <span class="k">return</span> <span class="n">arr</span></div>
 </pre></div>
 
+           </div>
           </div>
-          
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Wild Me.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../index.html">wbia-pyflann</a></h1>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
 
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../pyflann.html">pyflann package</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../index.html">Module code</a><ul>
-  </ul></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2020, Wild Me.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-    </div>
-
-    
-
-    
-  </body>
+</body>
 </html>
