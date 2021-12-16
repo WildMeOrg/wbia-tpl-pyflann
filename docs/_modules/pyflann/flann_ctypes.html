@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pyflann.flann_ctypes &mdash; wbia-pyflann 4.0.5.dev1+dirty documentation</title>
+  <title>pyflann.flann_ctypes &mdash; wbia-pyflann latest documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -27,7 +27,7 @@
             <a href="../../index.html" class="icon icon-home"> wbia-pyflann
           </a>
               <div class="version">
-                4.0.5.dev1+dirty
+                latest
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -415,7 +415,6 @@
     <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_log_verbosity</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_log_verbosity</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span><span class="n">c_int</span><span class="p">]</span>  <span class="c1"># level</span>
 
-
     <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_set_distance_type</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_set_distance_type</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">c_int</span><span class="p">,</span>
@@ -448,7 +447,6 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="p">)</span>
 
-
     <span class="n">flann</span><span class="o">.</span><span class="n">add_points</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">define_functions</span><span class="p">(</span>
         <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
@@ -463,7 +461,6 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="p">)</span>
 
-
     <span class="n">flann</span><span class="o">.</span><span class="n">remove_point</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">define_functions</span><span class="p">(</span>
         <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
@@ -475,7 +472,6 @@
 <span class="sd">flann.remove_point[%(numpy)s] = flannlib.flann_remove_point_%(C)s</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="p">)</span>
-
 
     <span class="n">flann</span><span class="o">.</span><span class="n">save_index</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">define_functions</span><span class="p">(</span>
@@ -538,7 +534,6 @@
     <span class="p">]</span>
     <span class="n">flann</span><span class="o">.</span><span class="n">find_nearest_neighbors</span><span class="p">[</span><span class="n">float64</span><span class="p">]</span> <span class="o">=</span> <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_find_nearest_neighbors_double</span>
 
-
     <span class="n">flann</span><span class="o">.</span><span class="n">find_nearest_neighbors_index</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">define_functions</span><span class="p">(</span>
         <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
@@ -599,7 +594,6 @@
     <span class="p">]</span>
     <span class="n">flann</span><span class="o">.</span><span class="n">radius_search</span><span class="p">[</span><span class="n">float64</span><span class="p">]</span> <span class="o">=</span> <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_radius_search_double</span>
 
-
     <span class="n">flann</span><span class="o">.</span><span class="n">compute_cluster_centers</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">define_functions</span><span class="p">(</span>
         <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
@@ -626,7 +620,6 @@
         <span class="n">POINTER</span><span class="p">(</span><span class="n">FLANNParameters</span><span class="p">),</span>  <span class="c1"># flann_params</span>
     <span class="p">]</span>
     <span class="n">flann</span><span class="o">.</span><span class="n">compute_cluster_centers</span><span class="p">[</span><span class="n">float64</span><span class="p">]</span> <span class="o">=</span> <span class="n">flannlib</span><span class="o">.</span><span class="n">flann_compute_cluster_centers_double</span>
-
 
     <span class="n">flann</span><span class="o">.</span><span class="n">free_index</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">define_functions</span><span class="p">(</span>
