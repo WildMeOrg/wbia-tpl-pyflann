@@ -346,7 +346,6 @@ if flannlib is not None:
     flannlib.flann_log_verbosity.restype = None
     flannlib.flann_log_verbosity.argtypes = [c_int]  # level
 
-
     flannlib.flann_set_distance_type.restype = None
     flannlib.flann_set_distance_type.argtypes = [
         c_int,
@@ -379,7 +378,6 @@ flann.used_memory[%(numpy)s] = flannlib.flann_used_memory_%(C)s
     """
     )
 
-
     flann.add_points = {}
     define_functions(
         r"""
@@ -394,7 +392,6 @@ flann.add_points[%(numpy)s] = flannlib.flann_add_points_%(C)s
     """
     )
 
-
     flann.remove_point = {}
     define_functions(
         r"""
@@ -406,7 +403,6 @@ flannlib.flann_remove_point_%(C)s.argtypes = [
 flann.remove_point[%(numpy)s] = flannlib.flann_remove_point_%(C)s
     """
     )
-
 
     flann.save_index = {}
     define_functions(
@@ -469,7 +465,6 @@ flann.find_nearest_neighbors[%(numpy)s] = flannlib.flann_find_nearest_neighbors_
     ]
     flann.find_nearest_neighbors[float64] = flannlib.flann_find_nearest_neighbors_double
 
-
     flann.find_nearest_neighbors_index = {}
     define_functions(
         r"""
@@ -530,7 +525,6 @@ flann.radius_search[%(numpy)s] = flannlib.flann_radius_search_%(C)s
     ]
     flann.radius_search[float64] = flannlib.flann_radius_search_double
 
-
     flann.compute_cluster_centers = {}
     define_functions(
         r"""
@@ -557,7 +551,6 @@ flann.compute_cluster_centers[%(numpy)s] = flannlib.flann_compute_cluster_center
         POINTER(FLANNParameters),  # flann_params
     ]
     flann.compute_cluster_centers[float64] = flannlib.flann_compute_cluster_centers_double
-
 
     flann.free_index = {}
     define_functions(
