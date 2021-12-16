@@ -12,14 +12,6 @@ pyflann.\_\_main\_\_ module
     :undoc-members:
     :show-inheritance:
 
-pyflann.\_version module
-------------------------
-
-.. automodule:: pyflann._version
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
 pyflann.exceptions module
 -------------------------
 
