@@ -146,7 +146,6 @@ class FLANN(object):
         self.__flann_parameters.update(kwargs)
 
     def __del__(self):
-        print('FLANN OBJECT IS DELETED')
         self.delete_index()
 
     @property
