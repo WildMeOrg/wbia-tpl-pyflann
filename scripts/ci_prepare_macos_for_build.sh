@@ -14,3 +14,5 @@ brew install \
     libomp \
     hdf5-mpi \
     lz4
+
+python setup.py build_ext --inplace

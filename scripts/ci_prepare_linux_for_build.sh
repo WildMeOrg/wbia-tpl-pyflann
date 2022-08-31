@@ -26,3 +26,5 @@ else
         libhdf5-openmpi-dev \
         liblz4-dev
 fi
+
+python setup.py build_ext --inplace
