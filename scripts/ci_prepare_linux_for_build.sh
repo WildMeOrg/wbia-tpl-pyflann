@@ -2,10 +2,6 @@
 
 set -ex
 
-export CUR_LOC="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-
-pip install -r requirements/build.txt
-
 if command -v yum &> /dev/null
 then
     yum install -y \
@@ -26,5 +22,3 @@ else
         libhdf5-openmpi-dev \
         liblz4-dev
 fi
-
-python setup.py build_ext --inplace

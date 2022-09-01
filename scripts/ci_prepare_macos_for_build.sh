@@ -2,10 +2,6 @@
 
 set -ex
 
-export CUR_LOC="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-
-pip install -r requirements/build.txt
-
 brew install \
     pkg-config \
     boost \
@@ -14,5 +10,3 @@ brew install \
     libomp \
     hdf5-mpi \
     lz4
-
-python setup.py build_ext --inplace
